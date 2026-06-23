@@ -4,60 +4,96 @@ import { Card } from "../components/ui/Card";
 import { Badge } from "../components/ui/Badge";
 import { Button } from "../components/ui/Button";
 import { projects } from "../data/projects";
-import { Github, ExternalLink } from "lucide-react";
+import { Github, ExternalLink, AlertCircle, CheckCircle2 } from "lucide-react";
 
 export const Projects = () => {
   return (
-    <section id="projects" className="py-20 px-6 lg:px-16 border-t border-slate-900 bg-slate-950">
+    <section id="projects" className="py-16 px-6 lg:px-12 bg-slate-50 border-t border-slate-200">
       <div className="max-w-5xl mx-auto">
-        <SectionHeading title="Recent Projects" subtitle="My Works" />
+        <SectionHeading title="Technical Case Studies" subtitle="Portfolio Projects" />
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="flex flex-col gap-8">
           {projects.map((project) => (
-            <Card key={project.id} className="flex flex-col h-full bg-slate-900/40">
-              {/* Project Mock Thumbnail */}
-              <div className="relative w-full h-44 rounded-lg bg-slate-950 border border-slate-800 flex items-center justify-center overflow-hidden mb-5">
-                <span className="text-xs text-slate-500 font-mono">[{project.image}]</span>
-                <div className="absolute inset-0 bg-indigo-600/5 transition-opacity duration-300 hover:opacity-0" />
-              </div>
+            <Card key={project.id} className="bg-white p-6 lg:p-8 hover:border-blue-500/30">
+              <div className="flex flex-col lg:flex-row gap-6 justify-between">
+                
+                {/* Project Details */}
+                <div className="flex-1 space-y-4">
+                  <div className="flex items-center gap-3">
+                    <h3 className="text-xl font-bold text-slate-900">{project.title}</h3>
+                    <div className="flex flex-wrap gap-1.5">
+                      {project.technologies.slice(0, 3).map((tech, idx) => (
+                        <Badge key={idx} variant="default" className="text-[10px] font-semibold py-0.5">
+                          {tech}
+                        </Badge>
+                      ))}
+                    </div>
+                  </div>
 
-              {/* Title & Description */}
-              <h3 className="text-xl font-bold text-white mb-2">{project.title}</h3>
-              <p className="text-sm text-slate-400 mb-5 flex-grow line-clamp-3">
-                {project.description}
-              </p>
+                  {/* Problem & Solution Case Study */}
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-4 pt-2">
+                    <div className="p-3 bg-red-50/50 rounded-lg border border-red-100 flex gap-2.5 items-start">
+                      <AlertCircle className="text-red-500 shrink-0 mt-0.5" size={16} />
+                      <div>
+                        <h4 className="text-xs font-bold text-red-800 uppercase tracking-wide">The Problem</h4>
+                        <p className="text-xs text-slate-600 mt-1 leading-relaxed">{project.problem}</p>
+                      </div>
+                    </div>
+                    
+                    <div className="p-3 bg-emerald-50/50 rounded-lg border border-emerald-100 flex gap-2.5 items-start">
+                      <CheckCircle2 className="text-emerald-500 shrink-0 mt-0.5" size={16} />
+                      <div>
+                        <h4 className="text-xs font-bold text-emerald-800 uppercase tracking-wide">The Solution</h4>
+                        <p className="text-xs text-slate-600 mt-1 leading-relaxed">{project.solution}</p>
+                      </div>
+                    </div>
+                  </div>
 
-              {/* Tags */}
-              <div className="flex flex-wrap gap-1.5 mb-6">
-                {project.tags.map((tag, tIdx) => (
-                  <Badge key={tIdx} variant="outline">
-                    {tag}
-                  </Badge>
-                ))}
-              </div>
+                  {/* Key Features */}
+                  <div>
+                    <h4 className="text-xs font-bold text-slate-700 uppercase tracking-wide mb-2">Key Engineering Features:</h4>
+                    <ul className="grid grid-cols-1 sm:grid-cols-2 gap-x-6 gap-y-1.5 list-disc list-inside text-xs text-slate-600">
+                      {project.keyFeatures.map((feature, fIdx) => (
+                        <li key={fIdx} className="leading-relaxed">{feature}</li>
+                      ))}
+                    </ul>
+                  </div>
 
-              {/* Actions */}
-              <div className="flex gap-3 mt-auto">
-                <a
-                  href={project.githubUrl}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="flex-1"
-                >
-                  <Button variant="secondary" size="sm" className="w-full text-xs">
-                    <Github size={14} className="mr-1.5" /> Code
-                  </Button>
-                </a>
-                <a
-                  href={project.liveUrl}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="flex-1"
-                >
-                  <Button variant="primary" size="sm" className="w-full text-xs">
-                    <ExternalLink size={14} className="mr-1.5" /> Live
-                  </Button>
-                </a>
+                  {/* Tech stack badges */}
+                  <div className="pt-2 flex flex-wrap gap-1.5">
+                    <span className="text-[10px] text-slate-400 font-semibold uppercase self-center mr-1">Stack:</span>
+                    {project.technologies.map((tech, idx) => (
+                      <Badge key={idx} variant="outline" className="text-[10px]">
+                        {tech}
+                      </Badge>
+                    ))}
+                  </div>
+                </div>
+
+                {/* Case Study Actions Sidebar */}
+                <div className="lg:w-44 flex flex-row lg:flex-col gap-3 justify-end shrink-0 pt-4 lg:pt-0 lg:border-l lg:border-slate-100 lg:pl-6">
+                  <a
+                    href={project.githubUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex-1 lg:w-full"
+                  >
+                    <Button variant="secondary" size="sm" className="w-full text-xs font-semibold py-2">
+                      <Github size={14} className="mr-1.5" /> Source Code
+                    </Button>
+                  </a>
+                  <a
+                    href={project.liveUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex-1 lg:w-full"
+                  >
+                    <Button variant="outline" size="sm" className="w-full text-xs font-semibold py-2 border-slate-200 text-slate-700 hover:bg-slate-50">
+                      <ExternalLink size={14} className="mr-1.5" /> Live Demo
+                    </Button>
+                  </a>
+                </div>
+
               </div>
             </Card>
           ))}
@@ -66,3 +102,4 @@ export const Projects = () => {
     </section>
   );
 };
+export default Projects;

@@ -1,23 +1,23 @@
 export const certifications = [
   {
-    title: "AWS Certified Developer – Associate",
-    issuer: "Amazon Web Services (AWS)",
-    date: "Jan 2026",
-    credentialId: "AWS-DEV-9988",
-    credentialUrl: "https://aws.amazon.com"
-  },
-  {
-    title: "Meta Front-End Developer Professional Certificate",
-    issuer: "Meta (Coursera)",
-    date: "Nov 2025",
-    credentialId: "META-FED-7722",
+    title: "Meta Back-End Developer Professional Certificate",
+    issuer: "Meta (via Coursera)",
+    date: "Feb 2026",
+    credentialId: "META-BE-8822",
     credentialUrl: "https://coursera.org"
   },
   {
-    title: "Triplebyte Certified Generalist Engineer",
-    issuer: "Triplebyte",
-    date: "Sep 2025",
-    credentialId: "TB-GEN-4411",
-    credentialUrl: "https://triplebyte.com"
+    title: "Java Programming Masterclass",
+    issuer: "Udemy",
+    date: "Dec 2025",
+    credentialId: "UDEMY-JAVA-4511",
+    credentialUrl: "https://udemy.com"
+  },
+  {
+    title: "Python for Data Science and Machine Learning",
+    issuer: "Udemy",
+    date: "Oct 2025",
+    credentialId: "UDEMY-PY-ML-3392",
+    credentialUrl: "https://udemy.com"
   }
 ];

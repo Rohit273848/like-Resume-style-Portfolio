@@ -1,20 +1,20 @@
 export const achievements = [
   {
-    title: "1st Place - University Innovation Hackathon",
-    issuer: "State Engineering University",
-    date: "March 2026",
-    description: "Led a team of 4 to design and develop an IoT-enabled smart irrigation system dashboard, securing first place among 60 teams."
+    title: "350+ Problems Solved on LeetCode",
+    issuer: "LeetCode",
+    date: "Ongoing",
+    description: "Successfully solved over 350 Data Structures and Algorithms problems, focused on dynamic programming, trees, and system-level hash mappings."
   },
   {
-    title: "Dean's List Award",
-    issuer: "State Engineering University",
-    date: "Academic Year 2024 - 2025",
-    description: "Awarded for maintaining a GPA above 3.80 across consecutive semesters."
+    title: "3-Star Coder (Max Rating: 1650+)",
+    issuer: "CodeChef",
+    date: "Jan 2026",
+    description: "Competed in multiple Division 2 rating challenges, optimizing space and time complexities under tight execution constraints."
   },
   {
-    title: "Open Source Contributor badge",
-    issuer: "GitHub",
-    date: "Oct 2024",
-    description: "Contributed to major web-framework libraries during Hacktoberfest, with multiple pull requests merged."
+    title: "500+ GeeksforGeeks Score",
+    issuer: "GeeksforGeeks",
+    date: "Dec 2025",
+    description: "Achieved a problem-solving score of 500+ focusing on mathematical optimizations, recursion, and graph navigation techniques."
   }
 ];

@@ -29,7 +29,7 @@ export const ScrollToTop = () => {
     <button
       onClick={scrollToTop}
       className={cn(
-        "fixed bottom-6 right-6 p-3 rounded-full bg-indigo-600 text-white shadow-lg hover:bg-indigo-700 transition-all duration-300 z-50",
+        "fixed bottom-6 right-6 p-3 rounded-full bg-blue-600 text-white shadow-lg hover:bg-blue-700 transition-all duration-300 z-50",
         "focus:outline-none hover:-translate-y-1 active:translate-y-0",
         isVisible ? "opacity-100 translate-y-0 scale-100" : "opacity-0 translate-y-4 scale-95 pointer-events-none"
       )}

@@ -1,29 +1,40 @@
 export const skills = [
   {
-    category: "Languages",
+    category: "Backend Development",
     items: [
-      { name: "JavaScript (ES6+)", level: "Advanced" },
-      { name: "TypeScript", level: "Intermediate" },
-      { name: "Python", level: "Advanced" },
-      { name: "C++", level: "Intermediate" },
-      { name: "HTML5 & CSS3", level: "Advanced" }
-    ]
-  },
-  {
-    category: "Frameworks & Libraries",
-    items: [
-      { name: "React", level: "Advanced" },
-      { name: "Next.js", level: "Intermediate" },
+      { name: "Node.js", level: "Advanced" },
       { name: "Express.js", level: "Advanced" },
-      { name: "Tailwind CSS", level: "Advanced" }
+      { name: "REST APIs", level: "Advanced" }
     ]
   },
   {
-    category: "Tools & DevOps",
+    category: "Programming",
     items: [
-      { name: "Git & GitHub", level: "Advanced" },
-      { name: "Docker", level: "Intermediate" },
-      { name: "Kubernetes", level: "Beginner" },
+      { name: "Java", level: "Advanced" },
+      { name: "Python", level: "Intermediate" },
+      { name: "JavaScript", level: "Advanced" }
+    ]
+  },
+  {
+    category: "Databases",
+    items: [
+      { name: "MongoDB", level: "Intermediate" }
+    ]
+  },
+  {
+    category: "AI & ML",
+    items: [
+      { name: "Python", level: "Advanced" },
+      { name: "NumPy", level: "Intermediate" },
+      { name: "Pandas", level: "Intermediate" },
+      { name: "Machine Learning (Learning)", level: "Beginner" }
+    ]
+  },
+  {
+    category: "Tools",
+    items: [
+      { name: "Git", level: "Advanced" },
+      { name: "GitHub", level: "Advanced" },
       { name: "VS Code", level: "Advanced" }
     ]
   }

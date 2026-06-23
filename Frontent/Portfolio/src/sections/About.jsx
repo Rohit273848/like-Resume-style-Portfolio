@@ -2,57 +2,58 @@ import React from "react";
 import { SectionHeading } from "../components/ui/SectionHeading";
 import { Card } from "../components/ui/Card";
 import { portfolioData } from "../data/portfolioData";
-import { MapPin, Mail, Briefcase, Calendar } from "lucide-react";
+import { Cpu, Database, Award, ArrowRight } from "lucide-react";
 
 export const About = () => {
   return (
-    <section id="about" className="py-20 px-6 lg:px-16 border-t border-slate-900 bg-slate-950">
+    <section id="about" className="py-16 px-6 lg:px-12 bg-slate-50">
       <div className="max-w-5xl mx-auto">
-        <SectionHeading title="About Me" subtitle="Biography" />
+        <SectionHeading title="About Me" subtitle="Career Objective & Focus" />
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 items-start">
-          {/* Main Description */}
-          <div className="md:col-span-2 space-y-6 text-slate-400 text-base leading-relaxed">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          {/* Main Biography Column */}
+          <div className="md:col-span-2 space-y-6 text-slate-600 text-sm md:text-base leading-relaxed">
             <p>
-              Hello! I'm a Computer Engineering student dedicated to learning how things work under the hood. My journey in software began when I wanted to build custom modifications for my favorite games, which rapidly pivoted into web application engineering.
+              I am a Computer Engineering student with a deep interest in backend engineering and intelligent systems. I believe that a solid software engineering foundation begins with understanding data structures, algorithm complexities, and reliable data modeling.
             </p>
             <p>
-              Currently, I focus on building accessible, premium web experiences and writing clean, scalable backend systems. I am continuously exploring devops pipelines, containerized deployments, and cloud native architectures.
+              My coding journey focuses heavily on backend development—writing high-throughput REST APIs, setting up relational and non-relational database structures, and managing background tasks. Additionally, I am exploring machine learning models to write intelligent web automation pipelines.
             </p>
-            
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-4 text-sm">
-              <div className="flex items-center gap-3 text-slate-300">
-                <MapPin size={18} className="text-indigo-500" />
-                <span>{portfolioData.location}</span>
-              </div>
-              <div className="flex items-center gap-3 text-slate-300">
-                <Mail size={18} className="text-indigo-500" />
-                <span>{portfolioData.email}</span>
-              </div>
-              <div className="flex items-center gap-3 text-slate-300">
-                <Briefcase size={18} className="text-indigo-500" />
-                <span>Open to Internships</span>
-              </div>
-              <div className="flex items-center gap-3 text-slate-300">
-                <Calendar size={18} className="text-indigo-500" />
-                <span>Available Fall 2026</span>
-              </div>
-            </div>
+            <p>
+              Currently, I am looking for internship opportunities where I can apply my skills in Java, Node.js, and Python, contribute to production codebases, and collaborate with senior engineering teams.
+            </p>
           </div>
 
-          {/* Quick Stats Grid */}
-          <div className="grid grid-cols-1 gap-4 w-full">
-            <Card className="flex flex-col items-center justify-center text-center p-6 bg-slate-900/40">
-              <span className="text-3xl font-extrabold text-indigo-500">{portfolioData.stats.experience}</span>
-              <span className="text-sm text-slate-400 font-medium mt-1">Experience</span>
+          {/* Quick Focus Card Grid */}
+          <div className="flex flex-col gap-4">
+            <Card className="flex items-start gap-4 p-5 hover:border-blue-500/30">
+              <span className="p-2 bg-blue-50 border border-blue-100 text-blue-600 rounded-lg">
+                <Database size={18} />
+              </span>
+              <div>
+                <h4 className="font-bold text-slate-800 text-sm">Systems Architecture</h4>
+                <p className="text-xs text-slate-500 mt-1">Focusing on REST APIs, microservices, and database performance tuning.</p>
+              </div>
             </Card>
-            <Card className="flex flex-col items-center justify-center text-center p-6 bg-slate-900/40">
-              <span className="text-3xl font-extrabold text-emerald-400">{portfolioData.stats.projects}</span>
-              <span className="text-sm text-slate-400 font-medium mt-1">Projects Completed</span>
+
+            <Card className="flex items-start gap-4 p-5 hover:border-emerald-500/30">
+              <span className="p-2 bg-emerald-50 border border-emerald-100 text-emerald-600 rounded-lg">
+                <Cpu size={18} />
+              </span>
+              <div>
+                <h4 className="font-bold text-slate-800 text-sm">AI & Automation</h4>
+                <p className="text-xs text-slate-500 mt-1">Applying Python, NumPy, and Pandas to write intelligent backend scripts.</p>
+              </div>
             </Card>
-            <Card className="flex flex-col items-center justify-center text-center p-6 bg-slate-900/40">
-              <span className="text-3xl font-extrabold text-purple-400">{portfolioData.stats.commits}</span>
-              <span className="text-sm text-slate-400 font-medium mt-1">GitHub Commits</span>
+
+            <Card className="flex items-start gap-4 p-5 hover:border-purple-500/30">
+              <span className="p-2 bg-purple-50 border border-purple-100 text-purple-600 rounded-lg">
+                <Award size={18} />
+              </span>
+              <div>
+                <h4 className="font-bold text-slate-800 text-sm">Problem Solving</h4>
+                <p className="text-xs text-slate-500 mt-1">Engaging in competitive programming and continuous DSA research.</p>
+              </div>
             </Card>
           </div>
         </div>
@@ -60,3 +61,4 @@ export const About = () => {
     </section>
   );
 };
+export default About;
