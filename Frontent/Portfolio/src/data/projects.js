@@ -18,36 +18,65 @@ export const projects = [
   },
   {
     id: 2,
-    title: "Distributed Task Scheduler & Queue System",
-    problem: "Monolithic web applications choke when running heavy computational workloads (like report generation or PDF rendering) synchronously on the main thread.",
-    solution: "Developed a decoupled, asynchronous queue worker system using Node.js and Redis, dividing publishers from background processor nodes.",
-    architecture: "[Task Request] ──> [Express Gateway] ──> [Redis Queue] ──> [BullMQ Worker Nodes] ──> [Central DB]",
+    title: "AI Powered Customer Support Platform (Support Desk)",
+    problem:
+      "Traditional customer support systems struggle with ticket management, tenant isolation, role-based access, and scalable workflow automation for multiple organizations.",
+    solution:
+      "Built a scalable multi-tenant SaaS customer support platform using Node.js, Express.js, and MongoDB with secure authentication, role-based access control, and optimized ticket management workflows.",
+    architecture:
+      "[Client] ──> [React Frontend] ──> [Express APIs] ──> [JWT Authentication] ──> [MongoDB Database]",
     keyFeatures: [
-      "Horizontal scaling capability with independent Node.js worker pools",
-      "Robust retry mechanics featuring configurable exponential backoff strategies",
-      "Dynamic priority-based processing logic for business-critical jobs",
-      "Real-time progress reporting using custom WebSocket connections"
+      "Developed 25+ RESTful APIs for ticketing and customer support workflows",
+      "Optimized MongoDB queries using indexing, reducing data retrieval latency by 35%",
+      "Implemented JWT authentication and Role-Based Access Control (RBAC)",
+      "Designed secure multi-tenant architecture ensuring complete tenant data isolation",
+      "Scalable SaaS platform supporting enterprise customer support operations"
     ],
-    technologies: ["Node.js", "Express.js", "Redis", "MongoDB", "Docker", "Git"],
-    githubUrl: "https://github.com",
-    liveUrl: "https://example.com",
-    image: "project-task-queue.webp"
+    technologies: [
+      "Node.js",
+      "Express.js",
+      "MongoDB",
+      "JWT",
+      "RBAC",
+      "REST API",
+      "Git",
+      "GitHub"
+    ],
+    githubUrl: "YOUR_GITHUB_LINK",
+    liveUrl: "YOUR_LIVE_LINK",
+    image: "support-desk.webp"
   },
   {
     id: 3,
-    title: "High-Performance Bookstore REST API",
-    problem: "Inventory mismatch bottlenecks and query latencies during high-frequency concurrent checkout events.",
-    solution: "Designed a clean-architecture REST API integrating MongoDB indexing, memory caching mechanisms, and schema optimistic locking operations.",
-    architecture: "[HTTP Request] ──> [Express Controller] ──> [Redis Cache] ──> [MongoDB Transactions]",
+    title: "QuickMind – AI Powered Search Engine",
+    problem:
+      "Users need fast, context-aware search and summarization systems capable of understanding natural language queries and retrieving relevant information intelligently.",
+    solution:
+      "Developed a full-stack AI search platform integrating OpenAI APIs, vector embeddings, Retrieval-Augmented Generation (RAG), and LangChain-powered AI agents for intelligent search and summarization.",
+    architecture:
+      "[User Query] ──> [React Frontend] ──> [AI Search API] ──> [Vector Database] ──> [RAG Pipeline] ──> [OpenAI Models]",
     keyFeatures: [
-      "Sub-50ms query response time via strategic Mongo query indexation",
-      "Race condition mitigation utilizing schema version controls",
-      "Centralized logging middleware with automated sanitization filters",
-      "Load tested with 10k concurrent simulated users using k6 scripting"
+      "Real-time AI summarization and interactive chat experience",
+      "Integrated OpenAI APIs with vector embeddings and RAG architecture",
+      "Built autonomous AI agents using LangChain workflows",
+      "Implemented Redux Toolkit for efficient state management",
+      "Secure authentication, encrypted cookies, and CORS protection",
+      "Markdown rendering and responsive modern user interface"
     ],
-    technologies: ["Node.js", "Express.js", "MongoDB", "REST APIs", "Git", "GitHub"],
-    githubUrl: "https://github.com",
-    liveUrl: "https://example.com",
-    image: "project-bookstore-api.webp"
+    technologies: [
+      "React.js",
+      "Redux Toolkit",
+      "Node.js",
+      "Express.js",
+      "OpenAI API",
+      "LangChain",
+      "RAG",
+      "MongoDB",
+      "JWT",
+      "GitHub"
+    ],
+    githubUrl: "YOUR_GITHUB_LINK",
+    liveUrl: "YOUR_LIVE_LINK",
+    image: "quickmind-ai.webp"
   }
 ];

@@ -3,9 +3,9 @@ export const skills = [
     category: "Programming",
     items: [
       { name: "Java", detail: "DSA, OOP, Multithreading" },
-      { name: "Python", detail: "Scikit-Learn, NLP, Automation" },
       { name: "JavaScript", detail: "ES6+, Async, DOM Manipulation" },
-      { name: "C/C++", detail: "Memory Mgmt, Compilers" }
+      { name: "Python", detail: "Scikit-Learn, NLP, Automation" },
+
     ]
   },
   {
@@ -13,8 +13,6 @@ export const skills = [
     items: [
       { name: "Node.js & Express", detail: "High-Throughput REST APIs" },
       { name: "REST APIs", detail: "Middleware, Validation, Cors" },
-      { name: "System Design", detail: "Monoliths, Microservices" },
-      { name: "Task Queues", detail: "Redis, BullMQ Worker Pools" }
     ]
   },
   {

@@ -38,7 +38,7 @@ export const Contact = () => {
   return (
     <section id="contact" className="w-full bg-white relative py-20 px-8 lg:px-20 border-b border-slate-200">
       <div className="max-w-5xl mx-auto">
-        
+
         {/* Section Header */}
         <div className="mb-12">
           <span className="font-mono text-xs uppercase tracking-widest text-slate-400 block mb-2">
@@ -54,7 +54,7 @@ export const Contact = () => {
 
         {/* Contact Grid */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-20">
-          
+
           {/* Left Column: Direct channels */}
           <div className="lg:col-span-5 flex flex-col justify-between">
             <div>
@@ -70,8 +70,8 @@ export const Contact = () => {
                     <h4 className="font-mono text-[9px] uppercase tracking-widest text-slate-400">
                       SMTP Address
                     </h4>
-                    <a 
-                      href={`mailto:${portfolioData.email}`} 
+                    <a
+                      href={`mailto:${portfolioData.email}`}
                       className="text-sm font-semibold text-slate-900 hover:text-blue-600 transition-colors"
                     >
                       {portfolioData.email}
@@ -100,7 +100,7 @@ export const Contact = () => {
                       Direct Voice
                     </h4>
                     <span className="text-sm font-mono font-semibold text-slate-900">
-                      +91 (Direct contact upon request)
+                      +91 7020803789
                     </span>
                   </div>
                 </div>
@@ -120,7 +120,7 @@ export const Contact = () => {
             </span>
 
             <form onSubmit={handleSubmit} className="space-y-8">
-              
+
               {/* Name Input */}
               <div className="flex flex-col gap-1">
                 <label className="font-mono text-[9px] uppercase tracking-widest text-slate-500">

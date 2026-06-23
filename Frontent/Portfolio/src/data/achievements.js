@@ -1,20 +1,14 @@
 export const achievements = [
   {
-    title: "350+ Problems Solved on LeetCode",
-    issuer: "LeetCode",
+    title: "250+ Problems Solved on LeetCode & GFG",
+    issuer: "LeetCode & GFG",
     date: "Ongoing",
-    description: "Successfully solved over 350 Data Structures and Algorithms problems, focused on dynamic programming, trees, and system-level hash mappings."
+    description: "Successfully solved over 250 Data Structures and Algorithms problems, focused on dynamic programming, trees, and system-level hash mappings."
   },
   {
-    title: "3-Star Coder (Max Rating: 1650+)",
-    issuer: "CodeChef",
-    date: "Jan 2026",
-    description: "Competed in multiple Division 2 rating challenges, optimizing space and time complexities under tight execution constraints."
-  },
-  {
-    title: "500+ GeeksforGeeks Score",
+    title: "300+ GeeksforGeeks Score",
     issuer: "GeeksforGeeks",
-    date: "Dec 2025",
-    description: "Achieved a problem-solving score of 500+ focusing on mathematical optimizations, recursion, and graph navigation techniques."
+    date: "Jan 2026",
+    description: "Achieved a problem-solving score of 300+ focusing on mathematical optimizations, recursion, and graph navigation techniques."
   }
 ];

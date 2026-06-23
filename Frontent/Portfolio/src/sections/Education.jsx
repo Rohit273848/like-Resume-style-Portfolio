@@ -22,7 +22,7 @@ export const Education = () => {
   return (
     <section id="education" className="w-full bg-white relative py-20 px-8 lg:px-20 border-b border-slate-200">
       <div className="max-w-5xl mx-auto">
-        
+
         {/* Section Header */}
         <div className="mb-12">
           <span className="font-mono text-xs uppercase tracking-widest text-slate-400 block mb-2">
@@ -38,7 +38,7 @@ export const Education = () => {
 
         {/* Split Timeline Grid */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16">
-          
+
           {/* Column 1: Academic Credentials */}
           <div>
             <h3 className="font-mono text-xs font-bold text-slate-800 uppercase tracking-widest mb-6 pb-2 border-b border-slate-100 flex items-center gap-2">
@@ -51,7 +51,7 @@ export const Education = () => {
                 <div key={idx} className="relative">
                   {/* Timeline point */}
                   <div className="absolute -left-[30px] top-1 w-2.5 h-2.5 rounded-full bg-blue-600 ring-4 ring-white" />
-                  
+
                   <div className="space-y-2">
                     <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-1">
                       <h4 className="text-sm font-bold text-slate-900 tracking-tight">
@@ -67,7 +67,7 @@ export const Education = () => {
                     </h5>
 
                     <div className="inline-block bg-slate-50 border border-slate-100 text-[10px] font-mono text-slate-700 px-2 py-0.5 mt-1">
-                      Score: {edu.gpa}
+                      {/* Score: {edu.gpa} */}
                     </div>
 
                     <p className="text-slate-600 text-xs leading-relaxed font-light mt-2">
@@ -80,8 +80,8 @@ export const Education = () => {
                       </span>
                       <div className="flex flex-wrap gap-1.5">
                         {edu.courses.map((course, cIdx) => (
-                          <span 
-                            key={cIdx} 
+                          <span
+                            key={cIdx}
                             className="font-mono text-[9px] text-slate-600 bg-slate-50 border border-slate-200 py-0.5 px-2 rounded"
                           >
                             {course}

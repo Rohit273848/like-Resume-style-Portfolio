@@ -1,23 +1,18 @@
 export const certifications = [
   {
-    title: "Meta Back-End Developer Professional Certificate",
-    issuer: "Meta (via Coursera)",
-    date: "Feb 2026",
-    credentialId: "META-BE-8822",
-    credentialUrl: "https://coursera.org"
+    title: "The Complete Full Stack Web Development Bootcamp",
+    issuer: "Udemy",
+    date: "2026",
+    credentialId: "UC-e8372037-ca9b-4ad7-a423-d6b9a77a966b",
+    credentialUrl: "https://www.udemy.com/certificate/UC-e8372037-ca9b-4ad7-a423-d6b9a77a966b/"
   },
   {
-    title: "Java Programming Masterclass",
-    issuer: "Udemy",
-    date: "Dec 2025",
-    credentialId: "UDEMY-JAVA-4511",
-    credentialUrl: "https://udemy.com"
-  },
-  {
-    title: "Python for Data Science and Machine Learning",
-    issuer: "Udemy",
-    date: "Oct 2025",
-    credentialId: "UDEMY-PY-ML-3392",
-    credentialUrl: "https://udemy.com"
+    title: "Java Full Stack Training Certification",
+    issuer: "QSpiders CampusConnect",
+    date: "2026",
+    credentialId: "QSP-JFS-2026",
+    credentialUrl: "https://ik.imagekit.io/cvlhdu1b2/20260312_205500.jpg?updatedAt=1779515903794",
+    description:
+      "Completed training in Core Java, OOPs, Collections, Exception Handling, File Handling, Java APIs, String Manipulation, and Object-Oriented Programming Concepts."
   }
 ];

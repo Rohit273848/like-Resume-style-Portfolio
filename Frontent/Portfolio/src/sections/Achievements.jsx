@@ -14,13 +14,6 @@ export const Achievements = () => {
       icon: Code2
     },
     {
-      platform: "CodeChef",
-      value: portfolioData.stats.codechef,
-      label: "3-Star (Max 1650+)",
-      url: portfolioData.codechef,
-      icon: Trophy
-    },
-    {
       platform: "GeeksforGeeks",
       value: portfolioData.stats.gfg,
       label: "Coding Score",
@@ -39,7 +32,7 @@ export const Achievements = () => {
   return (
     <section id="achievements" className="w-full bg-slate-50 relative py-20 px-8 lg:px-20 border-b border-slate-200">
       <div className="max-w-5xl mx-auto">
-        
+
         {/* Section Header */}
         <div className="mb-12">
           <span className="font-mono text-xs uppercase tracking-widest text-slate-400 block mb-2">
@@ -58,8 +51,8 @@ export const Achievements = () => {
           {profileStats.map((stat, sIdx) => {
             const Icon = stat.icon;
             return (
-              <div 
-                key={sIdx} 
+              <div
+                key={sIdx}
                 className="p-6 border-r border-b border-slate-200 bg-white hover:bg-slate-50/50 transition-colors duration-200 flex flex-col justify-between min-h-[140px]"
               >
                 <div className="flex justify-between items-start">
@@ -68,7 +61,7 @@ export const Achievements = () => {
                   </span>
                   <Icon size={14} className="text-blue-600" />
                 </div>
-                
+
                 <div className="mt-4">
                   <div className="font-mono text-2xl lg:text-3xl font-bold text-slate-900 leading-none">
                     {stat.value}
@@ -78,9 +71,9 @@ export const Achievements = () => {
                   </span>
                 </div>
 
-                <a 
-                  href={stat.url} 
-                  target="_blank" 
+                <a
+                  href={stat.url}
+                  target="_blank"
                   rel="noopener noreferrer"
                   className="inline-flex items-center gap-1 font-mono text-[9px] uppercase text-blue-600 hover:text-slate-950 mt-4 self-start tracking-wider"
                 >
@@ -93,7 +86,7 @@ export const Achievements = () => {
 
         {/* Part B: Certifications & Competitive Milestones */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
-          
+
           {/* Timeline of Achievements */}
           <div>
             <h3 className="font-mono text-xs font-bold text-slate-800 uppercase tracking-widest mb-6 pb-2 border-b border-slate-200 flex items-center gap-2">
@@ -103,7 +96,7 @@ export const Achievements = () => {
 
             <div className="space-y-6">
               {achievements.map((item, idx) => (
-                <div 
+                <div
                   key={idx}
                   className="flex gap-4 items-start pb-6 border-b border-slate-100 last:border-0"
                 >
@@ -138,7 +131,7 @@ export const Achievements = () => {
 
             <div className="space-y-6">
               {certifications.map((cert, idx) => (
-                <div 
+                <div
                   key={idx}
                   className="flex gap-4 items-start pb-6 border-b border-slate-100 last:border-0"
                 >
@@ -152,12 +145,12 @@ export const Achievements = () => {
                         {cert.date}
                       </span>
                     </div>
-                    
+
                     <div className="flex items-center justify-between mt-1 flex-wrap gap-2">
                       <span className="font-mono text-[9px] text-slate-500">
                         Issuer: {cert.issuer} | ID: {cert.credentialId}
                       </span>
-                      
+
                       <a
                         href={cert.credentialUrl}
                         target="_blank"

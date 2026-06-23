@@ -1,6 +1,6 @@
 import React from "react";
 import { Button } from "../components/ui/Button";
-import { ArrowRight, FileText, Github, ChevronRight } from "lucide-react";
+import { ArrowRight, FileText, Github, ChevronRight, ExternalLink } from "lucide-react";
 import { portfolioData } from "../data/portfolioData";
 import GridLine from "../components/ui/GridLine";
 import PlusNode from "../components/ui/PlusNode";
@@ -63,13 +63,18 @@ export const Hero = () => {
             Get In Touch <ArrowRight size={14} />
           </Button>
 
-          <a href="#" className="inline-block">
+          <a 
+            href={portfolioData.resumeUrl} 
+            target="_blank" 
+            rel="noopener noreferrer" 
+            className="inline-block"
+          >
             <Button
               variant="outline"
               size="lg"
               className="text-xs uppercase font-mono tracking-wider gap-2 border-slate-300 text-slate-700 hover:bg-slate-50 hover:border-slate-800"
             >
-              Download CV <FileText size={14} />
+              View CV <ExternalLink size={14} />
             </Button>
           </a>
 

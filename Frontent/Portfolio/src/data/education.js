@@ -1,9 +1,8 @@
 export const education = [
   {
-    institution: "State Engineering College",
+    institution: "Shreeyash College of Engineering and Technology",
     degree: "Bachelor of Technology in Computer Engineering",
     period: "2023 - Present",
-    gpa: "8.9 / 10.0 CGPA",
     courses: [
       "Data Structures & Algorithms (DSA)",
       "Database Management Systems (DBMS)",
