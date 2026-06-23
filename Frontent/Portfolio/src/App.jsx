@@ -1,13 +1,12 @@
 import React, { useState, useEffect } from "react";
 import { Sidebar } from "./sections/Sidebar";
+import { Header } from "./sections/Header";
 import { Hero } from "./sections/Hero";
 import { About } from "./sections/About";
 import { Skills } from "./sections/Skills";
 import { Projects } from "./sections/Projects";
 import { Education } from "./sections/Education";
 import { Achievements } from "./sections/Achievements";
-import { Certifications } from "./sections/Certifications";
-import { GitHubStats } from "./sections/GitHubStats";
 import { Contact } from "./sections/Contact";
 import { Footer } from "./sections/Footer";
 import { ScrollToTop } from "./components/ScrollToTop";
@@ -24,13 +23,12 @@ function App() {
       "projects",
       "education",
       "achievements",
-      "certifications",
       "contact"
     ];
 
     const observerOptions = {
       root: null,
-      rootMargin: "-20% 0px -50% 0px",
+      rootMargin: "-30% 0px -60% 0px",
       threshold: 0
     };
 
@@ -58,8 +56,9 @@ function App() {
   }, []);
 
   return (
-    <div className="min-h-screen bg-slate-950 text-slate-100 flex flex-col lg:flex-row">
-      {/* Sidebar Navigation */}
+    <div className="min-h-screen bg-slate-50 text-slate-800 flex flex-col lg:flex-row antialiased selection:bg-blue-100 selection:text-blue-900">
+      
+      {/* Fixed Profile Sidebar Panel */}
       <Sidebar
         activeSection={activeSection}
         setActiveSection={setActiveSection}
@@ -67,21 +66,26 @@ function App() {
         setMenuOpen={setMenuOpen}
       />
 
-      {/* Main content viewport */}
-      <main className="flex-1 lg:pl-64 min-w-0">
+      {/* Main Content viewport scroll area */}
+      <main className="flex-1 lg:pl-80 min-w-0 flex flex-col min-h-screen pt-16 lg:pt-0">
+        
+        {/* Top Header metadata bar */}
+        <Header />
+
+        {/* Dynamic Editorial Sections */}
         <Hero />
         <About />
         <Skills />
         <Projects />
         <Education />
         <Achievements />
-        <Certifications />
-        <GitHubStats />
         <Contact />
+        
+        {/* Footer */}
         <Footer />
       </main>
 
-      {/* Floating utility */}
+      {/* Back to top utility indicator */}
       <ScrollToTop />
     </div>
   );

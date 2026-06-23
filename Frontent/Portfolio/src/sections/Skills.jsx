@@ -1,47 +1,62 @@
 import React from "react";
-import { SectionHeading } from "../components/ui/SectionHeading";
-import { Card } from "../components/ui/Card";
-import { Badge } from "../components/ui/Badge";
 import { skills } from "../data/skills";
 
 export const Skills = () => {
   return (
-    <section id="skills" className="py-16 px-6 lg:px-12 bg-slate-50 border-t border-slate-200">
+    <section id="skills" className="w-full bg-white relative py-20 px-8 lg:px-20 border-b border-slate-200">
       <div className="max-w-5xl mx-auto">
-        <SectionHeading title="Technical Skills" subtitle="My Competencies" />
+        
+        {/* Section Header */}
+        <div className="mb-12">
+          <span className="font-mono text-xs uppercase tracking-widest text-slate-400 block mb-2">
+            03 // Skills Matrix
+          </span>
+          <h2 className="text-3xl font-bold text-slate-900 tracking-tight">
+            Technical Competencies
+          </h2>
+          <p className="text-sm text-slate-500 mt-2">
+            A precise mapping of my software engineering capabilities and focus areas.
+          </p>
+        </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {skills.map((skillGroup, index) => {
-            const isBackend = skillGroup.category.toLowerCase().includes("backend");
-            const isAI = skillGroup.category.toLowerCase().includes("ai");
-            
-            let badgeVariant = "default";
-            if (isBackend) badgeVariant = "default"; // blue
-            else if (isAI) badgeVariant = "accent";   // purple
-            else badgeVariant = "outline";           // slate outline
-
+        {/* Matrix Grid Layout */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 border-t border-l border-slate-200">
+          {skills.map((group, index) => {
+            const indexNumber = String(index + 1).padStart(2, "0");
             return (
-              <Card key={index} className="flex flex-col h-full bg-white hover:border-blue-500/20">
-                <h3 className="text-base font-bold text-slate-800 mb-4 flex items-center gap-2">
-                  <span className={`w-2.5 h-2.5 rounded-full ${
-                    isBackend ? "bg-blue-600" : isAI ? "bg-purple-600" : "bg-slate-400"
-                  }`} />
-                  {skillGroup.category}
+              <div 
+                key={index}
+                className="p-6 border-r border-b border-slate-200 bg-white hover:bg-slate-50/50 transition-colors duration-200"
+              >
+                {/* Category Header */}
+                <h3 className="font-mono text-xs font-bold text-slate-800 uppercase tracking-widest mb-4 flex items-center justify-between">
+                  <span>{indexNumber} // {group.category}</span>
+                  <span className="w-1.5 h-1.5 rounded-full bg-blue-600" />
                 </h3>
-                
-                <div className="flex flex-wrap gap-2 mt-auto">
-                  {skillGroup.items.map((skill, sIdx) => (
-                    <Badge key={sIdx} variant={badgeVariant} className="text-xs font-semibold py-1">
-                      {skill.name}
-                    </Badge>
+
+                {/* Skills List */}
+                <div className="space-y-4">
+                  {group.items.map((skill, sIdx) => (
+                    <div key={sIdx} className="group/item">
+                      <div className="flex items-baseline justify-between">
+                        <span className="text-sm font-semibold text-slate-900 font-sans tracking-tight group-hover/item:text-blue-600 transition-colors">
+                          {skill.name}
+                        </span>
+                      </div>
+                      <p className="font-mono text-[10px] text-slate-500 mt-0.5 tracking-wide leading-tight">
+                        {skill.detail}
+                      </p>
+                    </div>
                   ))}
                 </div>
-              </Card>
+              </div>
             );
           })}
         </div>
+
       </div>
     </section>
   );
 };
+
 export default Skills;

@@ -1,68 +1,96 @@
 import React from "react";
 import { Button } from "../components/ui/Button";
-import { ArrowRight, FileText } from "lucide-react";
+import { ArrowRight, FileText, Github, ChevronRight } from "lucide-react";
 import { portfolioData } from "../data/portfolioData";
-import rohitAvatar from "../assets/images/rohit-avatar.png";
+import GridLine from "../components/ui/GridLine";
+import PlusNode from "../components/ui/PlusNode";
 
 export const Hero = () => {
   return (
-    <section id="hero" className="w-full bg-slate-50 flex items-center justify-center p-6 lg:p-12">
-      <div className="max-w-5xl w-full grid grid-cols-1 md:grid-cols-2 rounded-2xl overflow-hidden shadow-xl shadow-slate-200 border border-slate-200">
-        
-        {/* Left Side: Large Portrait Image */}
-        <div className="relative w-full h-80 md:h-[450px] bg-slate-200">
-          <img
-            src={rohitAvatar}
-            alt={portfolioData.name}
-            className="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-700 ease-in-out"
-          />
-          {/* Overlay gradient */}
-          <div className="absolute inset-0 bg-gradient-to-t from-slate-950/20 via-transparent to-transparent pointer-events-none" />
+    <section id="hero" className="w-full bg-white relative py-20 px-8 lg:py-32 lg:px-20 border-b border-slate-200 overflow-hidden">
+      {/* Decorative Blueprint Guide Lines */}
+      <GridLine orientation="horizontal" className="top-8 left-0" />
+      <GridLine orientation="horizontal" className="bottom-8 left-0" />
+      <GridLine orientation="vertical" className="left-8 top-0" />
+      <GridLine orientation="vertical" className="right-8 top-0" />
+      
+      {/* Intersections */}
+      <PlusNode className="top-8 left-8" />
+      <PlusNode className="top-8 right-8" />
+      <PlusNode className="bottom-8 left-8" />
+      <PlusNode className="bottom-8 right-8" />
+
+      <div className="max-w-4xl mx-auto py-6 relative z-20">
+        {/* Editorial Subtitle */}
+        <div className="flex items-center gap-2 mb-6">
+          <span className="font-mono text-xs uppercase tracking-widest text-blue-600 font-bold bg-blue-50 px-2 py-0.5 rounded">
+            Engineering Portfolio
+          </span>
+          <ChevronRight size={12} className="text-slate-300" />
+          <span className="font-mono text-xs uppercase tracking-widest text-slate-400">
+            System Spec v2026.1
+          </span>
         </div>
 
-        {/* Right Side: Slate Professional Info Card */}
-        <div className="bg-slate-900 text-white flex flex-col justify-center p-8 lg:p-12 gap-5">
-          <div>
-            <span className="text-[10px] md:text-xs font-semibold tracking-widest text-blue-400 uppercase">
-              {portfolioData.title}
-            </span>
-            <h1 className="text-4xl lg:text-5xl font-extrabold text-white mt-2 tracking-tight">
-              {portfolioData.name}
-            </h1>
-            <h2 className="text-sm md:text-base text-slate-300 font-medium mt-1 uppercase tracking-wide">
-              {portfolioData.specialization}
-            </h2>
-          </div>
+        {/* Large Editorial Title */}
+        <h1 className="text-5xl lg:text-7xl font-extrabold text-slate-900 tracking-tighter leading-tight mb-8">
+          ROHIT MAHAJAN
+        </h1>
 
-          <p className="text-slate-400 text-sm md:text-base leading-relaxed font-light">
-            Building scalable backend architectures, designing robust database schemas, and exploring AI-driven solutions to automate real-world processes.
+        {/* Big Statement with Serif Italic details */}
+        <p className="text-2xl lg:text-4xl text-slate-800 font-light leading-relaxed mb-10 max-w-3xl">
+          Building scalable <span className="font-serif italic font-normal text-blue-600">backend systems</span> and 
+          exploring <span className="font-serif italic font-normal text-blue-600">intelligent software</span> powered 
+          by <span className="font-serif italic font-normal text-blue-600">artificial intelligence</span>.
+        </p>
+
+        {/* Short context */}
+        <div className="border-l-2 border-slate-200 pl-6 mb-12 max-w-2xl">
+          <p className="text-slate-600 text-sm leading-relaxed">
+            Computer Engineering student specializing in backend architecture, distributed jobs coordination, 
+            algorithmic optimization, and machine learning pipelines. Designing clear, performance-driven web products.
           </p>
-
-          <div className="flex flex-wrap gap-4 pt-2">
-            <Button
-              variant="primary"
-              size="md"
-              onClick={() => document.getElementById("contact")?.scrollIntoView({ behavior: "smooth" })}
-              className="text-xs tracking-wider uppercase font-semibold gap-1.5"
-            >
-              Contact Me <ArrowRight size={14} />
-            </Button>
-            
-            {/* Outline CV Download, matching the reference outline block */}
-            <a href="#" className="inline-block">
-              <Button
-                variant="outline"
-                size="md"
-                className="text-xs tracking-wider uppercase font-semibold border-slate-700 text-white hover:bg-slate-800 hover:border-blue-500 hover:text-white"
-              >
-                Download CV <FileText className="ml-1.5" size={14} />
-              </Button>
-            </a>
-          </div>
         </div>
 
+        {/* Button CTAs */}
+        <div className="flex flex-wrap items-center gap-4">
+          <Button
+            variant="primary"
+            size="lg"
+            onClick={() => document.getElementById("contact")?.scrollIntoView({ behavior: "smooth" })}
+            className="text-xs uppercase font-mono tracking-wider gap-2 bg-slate-900 hover:bg-blue-600 hover:-translate-y-0.5"
+          >
+            Get In Touch <ArrowRight size={14} />
+          </Button>
+
+          <a href="#" className="inline-block">
+            <Button
+              variant="outline"
+              size="lg"
+              className="text-xs uppercase font-mono tracking-wider gap-2 border-slate-300 text-slate-700 hover:bg-slate-50 hover:border-slate-800"
+            >
+              Download CV <FileText size={14} />
+            </Button>
+          </a>
+
+          <a 
+            href={portfolioData.github} 
+            target="_blank" 
+            rel="noopener noreferrer" 
+            className="inline-block"
+          >
+            <Button
+              variant="ghost"
+              size="lg"
+              className="text-xs uppercase font-mono tracking-wider gap-2 text-slate-500 hover:text-slate-900 hover:bg-slate-100/50"
+            >
+              <Github size={14} /> GitHub Profile
+            </Button>
+          </a>
+        </div>
       </div>
     </section>
   );
 };
+
 export default Hero;

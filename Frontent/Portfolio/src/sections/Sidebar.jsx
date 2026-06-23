@@ -11,21 +11,21 @@ import {
   Menu, 
   X,
   Home,
-  FileDown
+  FileDown,
+  Terminal
 } from "lucide-react";
 import { portfolioData } from "../data/portfolioData";
 import rohitAvatar from "../assets/images/rohit-avatar.png";
 
 export const Sidebar = ({ activeSection, setActiveSection, menuOpen, setMenuOpen }) => {
   const navItems = [
-    { id: "hero", label: "Home", icon: Home },
-    { id: "about", label: "About Me", icon: User },
-    { id: "skills", label: "Skills", icon: Code },
-    { id: "projects", label: "Projects", icon: FolderGit2 },
-    { id: "education", label: "Education", icon: GraduationCap },
-    { id: "achievements", label: "Achievements", icon: Trophy },
-    { id: "github-stats", label: "Profiles & Stats", icon: Github },
-    { id: "contact", label: "Contact", icon: Mail },
+    { id: "hero", label: "01 // Home", icon: Home },
+    { id: "about", label: "02 // About Me", icon: User },
+    { id: "skills", label: "03 // Skills Matrix", icon: Code },
+    { id: "projects", label: "04 // Case Studies", icon: FolderGit2 },
+    { id: "education", label: "05 // Education & Exp", icon: GraduationCap },
+    { id: "achievements", label: "06 // Achievements", icon: Trophy },
+    { id: "contact", label: "07 // Contact", icon: Mail },
   ];
 
   const handleNavClick = (id) => {
@@ -39,40 +39,73 @@ export const Sidebar = ({ activeSection, setActiveSection, menuOpen, setMenuOpen
 
   return (
     <>
-      {/* Mobile Toggle Button */}
-      <button
-        onClick={() => setMenuOpen(!menuOpen)}
-        className="fixed top-4 right-4 z-50 p-2.5 bg-slate-900 border border-slate-800 text-white rounded-lg lg:hidden focus:outline-none"
-        aria-label="Toggle navigation menu"
-      >
-        {menuOpen ? <X size={20} /> : <Menu size={20} />}
-      </button>
+      {/* Mobile Sticky Header Bar */}
+      <div className="fixed top-0 left-0 right-0 h-16 bg-white/90 backdrop-blur-md border-b border-slate-200 z-50 flex items-center justify-between px-6 lg:hidden">
+        <span className="font-mono text-xs font-bold uppercase tracking-widest text-slate-900">
+          rohit.dev
+        </span>
+        <button
+          onClick={() => setMenuOpen(!menuOpen)}
+          className="p-2 border border-slate-200 text-slate-800 rounded-lg hover:bg-slate-50 transition-colors"
+          aria-label="Toggle navigation menu"
+        >
+          {menuOpen ? <X size={18} /> : <Menu size={18} />}
+        </button>
+      </div>
 
-      {/* Sidebar Panel */}
+      {/* Sidebar Panel Container */}
       <aside
-        className={`fixed top-0 left-0 h-full w-64 bg-slate-950 border-r border-slate-900 z-40 flex flex-col justify-between pt-8 pb-6 transition-transform duration-300 lg:translate-x-0 ${
+        className={`fixed top-0 left-0 h-full w-80 bg-white border-r border-slate-200 z-40 flex flex-col justify-between pt-24 pb-8 transition-transform duration-300 lg:translate-x-0 lg:pt-10 ${
           menuOpen ? "translate-x-0" : "-translate-x-full"
         }`}
       >
-        {/* Top Section */}
+        {/* Top Branding & Avatar Info */}
         <div className="flex flex-col gap-6">
-          {/* Avatar and Name */}
-          <div className="flex flex-col items-center text-center px-6 mb-4">
-            <div className="w-20 h-20 rounded-xl overflow-hidden border-2 border-blue-600/30 p-0.5 bg-slate-900 mb-3 shadow-md shadow-blue-500/10">
-              <img 
-                src={rohitAvatar} 
-                alt={portfolioData.name} 
-                className="w-full h-full object-cover rounded-lg grayscale hover:grayscale-0 transition-all duration-500" 
-              />
-            </div>
-            <h1 className="font-bold text-white text-lg tracking-tight">{portfolioData.name}</h1>
-            <span className="text-[10px] text-blue-400 font-semibold tracking-wider uppercase mt-1">
-              Backend Developer
+          {/* Header Brand for large screens */}
+          <div className="hidden lg:flex items-center gap-2 px-8 mb-2">
+            <Terminal size={16} className="text-blue-600" />
+            <span className="font-mono text-xs font-extrabold uppercase tracking-widest text-slate-900">
+              rohitmahajan.dev
             </span>
           </div>
 
+          {/* Profile Grayscale Photo Frame */}
+          <div className="flex flex-col items-center px-8 text-center">
+            <div className="relative group w-24 h-24 bg-slate-50 border border-slate-200 p-1 mb-4">
+              {/* Technical Layout Guides on Image Box */}
+              <div className="absolute -top-1.5 -left-1.5 text-[8px] font-mono text-slate-300 select-none">+</div>
+              <div className="absolute -top-1.5 -right-1.5 text-[8px] font-mono text-slate-300 select-none">+</div>
+              <div className="absolute -bottom-1.5 -left-1.5 text-[8px] font-mono text-slate-300 select-none">+</div>
+              <div className="absolute -bottom-1.5 -right-1.5 text-[8px] font-mono text-slate-300 select-none">+</div>
+              
+              <img 
+                src={rohitAvatar} 
+                alt={portfolioData.name} 
+                className="w-full h-full object-cover grayscale contrast-115 hover:grayscale-0 transition-all duration-500 ease-in-out" 
+              />
+            </div>
+            
+            <h1 className="font-sans font-bold text-slate-900 text-lg tracking-tight mt-1">
+              {portfolioData.name}
+            </h1>
+            <span className="font-mono text-[10px] text-slate-500 uppercase tracking-wider mt-0.5">
+              Backend & AI Engineer
+            </span>
+
+            {/* Pulsing Status Dot */}
+            <div className="inline-flex items-center gap-1.5 bg-blue-50/50 border border-blue-100 rounded-full px-3 py-1 mt-3">
+              <span className="relative flex h-2 w-2">
+                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-blue-400 opacity-75"></span>
+                <span className="relative inline-flex rounded-full h-2 w-2 bg-blue-600"></span>
+              </span>
+              <span className="text-[10px] text-blue-700 font-semibold tracking-wider uppercase">
+                Open to Internship
+              </span>
+            </div>
+          </div>
+
           {/* Navigation Links */}
-          <nav className="flex flex-col w-full">
+          <nav className="flex flex-col w-full mt-4">
             {navItems.map((item) => {
               const Icon = item.icon;
               const isActive = activeSection === item.id;
@@ -80,14 +113,14 @@ export const Sidebar = ({ activeSection, setActiveSection, menuOpen, setMenuOpen
                 <button
                   key={item.id}
                   onClick={() => handleNavClick(item.id)}
-                  className={`group flex items-center justify-between w-full px-6 py-3.5 text-sm font-medium transition-all duration-300 border-r-4 ${
+                  className={`group flex items-center justify-between w-full px-8 py-3 text-xs font-mono tracking-wider uppercase transition-all duration-200 border-r-2 ${
                     isActive
-                      ? "bg-slate-900 text-white border-blue-600"
-                      : "text-slate-400 hover:text-white hover:bg-slate-900/40 border-transparent"
+                      ? "bg-slate-50 text-blue-600 border-blue-600 font-bold"
+                      : "text-slate-500 hover:text-slate-900 hover:bg-slate-50/50 border-transparent"
                   }`}
                 >
                   <div className="flex items-center gap-3">
-                    <Icon size={16} className={isActive ? "text-blue-500" : "text-slate-400 group-hover:text-white"} />
+                    <Icon size={14} className={isActive ? "text-blue-600" : "text-slate-400 group-hover:text-slate-600"} />
                     <span>{item.label}</span>
                   </div>
                 </button>
@@ -96,50 +129,53 @@ export const Sidebar = ({ activeSection, setActiveSection, menuOpen, setMenuOpen
           </nav>
         </div>
 
-        {/* Bottom Section */}
-        <div className="px-6 flex flex-col gap-4">
-          {/* Resume Download CTA */}
+        {/* Bottom Panel Actions & Links */}
+        <div className="px-8 flex flex-col gap-4">
+          {/* Minimal Resume Download CTA */}
           <a
             href="#"
-            className="flex items-center justify-center gap-2 bg-blue-600 hover:bg-blue-700 text-white py-2 px-4 rounded-lg text-xs font-semibold tracking-wide transition-all duration-300 shadow-lg shadow-blue-600/20 active:translate-y-0.5"
+            className="group flex items-center justify-center gap-2 bg-slate-900 hover:bg-blue-600 text-white font-mono text-xs uppercase tracking-wider py-2.5 px-4 transition-all duration-300"
           >
-            <FileDown size={14} /> Download CV
+            <FileDown size={14} className="group-hover:translate-y-0.5 transition-transform" /> 
+            Download CV
           </a>
 
-          {/* Socials Grid */}
-          <div className="flex items-center justify-center gap-4 bg-slate-900/40 py-2.5 rounded-xl border border-slate-900">
+          {/* Social Row */}
+          <div className="flex items-center justify-between border-t border-slate-100 pt-4">
             <a
               href={portfolioData.github}
               target="_blank"
               rel="noopener noreferrer"
-              className="text-slate-400 hover:text-white transition-colors"
+              className="p-1.5 border border-slate-200 text-slate-400 hover:text-blue-600 hover:border-blue-600 transition-all rounded-md"
               aria-label="GitHub Profile"
             >
-              <Github size={16} />
+              <Github size={15} />
             </a>
             <a
               href={portfolioData.linkedin}
               target="_blank"
               rel="noopener noreferrer"
-              className="text-slate-400 hover:text-white transition-colors"
+              className="p-1.5 border border-slate-200 text-slate-400 hover:text-blue-600 hover:border-blue-600 transition-all rounded-md"
               aria-label="LinkedIn Profile"
             >
-              <Linkedin size={16} />
+              <Linkedin size={15} />
             </a>
             <a
               href={`mailto:${portfolioData.email}`}
-              className="text-slate-400 hover:text-white transition-colors"
+              className="p-1.5 border border-slate-200 text-slate-400 hover:text-blue-600 hover:border-blue-600 transition-all rounded-md"
               aria-label="Send Email"
             >
-              <Mail size={16} />
+              <Mail size={15} />
             </a>
           </div>
-          <p className="text-[9px] text-slate-600 text-center tracking-wide">
-            &copy; {new Date().getFullYear()} {portfolioData.name}
+          
+          <p className="font-mono text-[9px] text-slate-400 text-center uppercase tracking-widest mt-1">
+            &copy; {new Date().getFullYear()} ROHIT.MAHAJAN
           </p>
         </div>
       </aside>
     </>
   );
 };
+
 export default Sidebar;
