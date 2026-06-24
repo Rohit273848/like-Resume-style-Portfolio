@@ -41,3 +41,63 @@ body {
   background: #94a3b8;
 }
 
+/* Custom keyframes for hero redesign */
+@keyframes float-1 {
+  0%, 100% {
+    transform: translate(-50%, -50%) translateY(0px) rotate(0deg);
+  }
+  50% {
+    transform: translate(-50%, -50%) translateY(-10px) rotate(1deg);
+  }
+}
+
+@keyframes float-2 {
+  0%, 100% {
+    transform: translate(-50%, -50%) translateY(0px) rotate(0deg);
+  }
+  50% {
+    transform: translate(-50%, -50%) translateY(-6px) translateX(4px) rotate(-1deg);
+  }
+}
+
+@keyframes float-3 {
+  0%, 100% {
+    transform: translate(-50%, -50%) translateY(0px) rotate(0deg);
+  }
+  50% {
+    transform: translate(-50%, -50%) translateY(-8px) translateX(-4px) rotate(0.5deg);
+  }
+}
+
+@keyframes network-pulse {
+  0%, 100% {
+    opacity: 0.15;
+  }
+  50% {
+    opacity: 0.35;
+  }
+}
+
+@keyframes dash {
+  to {
+    stroke-dashoffset: -40;
+  }
+}
+
+.animate-float-1 {
+  animation: float-1 6s ease-in-out infinite;
+}
+.animate-float-2 {
+  animation: float-2 7s ease-in-out infinite;
+}
+.animate-float-3 {
+  animation: float-3 8s ease-in-out infinite;
+}
+.animate-dash {
+  animation: dash 20s linear infinite;
+}
+.animate-pulse-slow {
+  animation: network-pulse 4s ease-in-out infinite;
+}
+
+
