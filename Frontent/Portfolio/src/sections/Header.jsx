@@ -6,8 +6,8 @@ export const Header = () => {
     <header className="hidden lg:flex h-14 bg-white border-b border-slate-200 items-center justify-between px-12 relative z-30">
       {/* Grid line indicator */}
       <div className="flex items-center gap-2">
-        <Globe size={13} className="text-slate-400 animate-spin-slow" />
-        <span className="font-mono text-[10px] uppercase tracking-widest text-slate-400">
+        <Globe size={14} className="text-slate-400 animate-spin-slow" />
+        <span className="font-mono text-xs uppercase tracking-widest text-slate-500 font-semibold">
           Location: India (GMT+5:30)
         </span>
       </div>
@@ -19,7 +19,7 @@ export const Header = () => {
             <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
             <span className="relative inline-flex rounded-full h-2 w-2 bg-emerald-500"></span>
           </span>
-          <span className="font-mono text-[10px] uppercase tracking-widest text-slate-500 font-medium">
+          <span className="font-mono text-xs uppercase tracking-widest text-slate-600 font-bold">
             Available for Summer/Fall 2026 Internships
           </span>
         </div>

@@ -41,13 +41,13 @@ export const Contact = () => {
 
         {/* Section Header */}
         <div className="mb-12">
-          <span className="font-mono text-xs uppercase tracking-widest text-slate-400 block mb-2">
+          <span className="font-mono text-sm uppercase tracking-widest text-slate-500 font-semibold block mb-2">
             07 // Contact Channel
           </span>
           <h2 className="text-3xl font-bold text-slate-900 tracking-tight">
             Initiate Contact
           </h2>
-          <p className="text-sm text-slate-500 mt-2">
+          <p className="text-base text-slate-600 mt-2">
             Open for backend engineering internships, AI research initiatives, and technical discussions.
           </p>
         </div>
@@ -58,7 +58,7 @@ export const Contact = () => {
           {/* Left Column: Direct channels */}
           <div className="lg:col-span-5 flex flex-col justify-between">
             <div>
-              <span className="font-mono text-xs uppercase tracking-widest text-slate-400 block mb-6">
+              <span className="font-mono text-sm uppercase tracking-widest text-slate-500 font-semibold block mb-6">
                 Recruiter Access Points
               </span>
 
@@ -67,12 +67,12 @@ export const Contact = () => {
                 <div className="py-5 border-b border-slate-200 flex gap-4 items-start">
                   <Mail size={16} className="text-blue-600 mt-1 shrink-0" />
                   <div>
-                    <h4 className="font-mono text-[9px] uppercase tracking-widest text-slate-400">
+                    <h4 className="font-mono text-xs uppercase tracking-widest text-slate-500 font-semibold">
                       SMTP Address
                     </h4>
                     <a
                       href={`mailto:${portfolioData.email}`}
-                      className="text-sm font-semibold text-slate-900 hover:text-blue-600 transition-colors"
+                      className="text-base font-semibold text-slate-900 hover:text-blue-600 transition-colors"
                     >
                       {portfolioData.email}
                     </a>
@@ -83,10 +83,10 @@ export const Contact = () => {
                 <div className="py-5 border-b border-slate-200 flex gap-4 items-start">
                   <MapPin size={16} className="text-blue-600 mt-1 shrink-0" />
                   <div>
-                    <h4 className="font-mono text-[9px] uppercase tracking-widest text-slate-400">
+                    <h4 className="font-mono text-xs uppercase tracking-widest text-slate-500 font-semibold">
                       Geographic Node
                     </h4>
-                    <span className="text-sm font-semibold text-slate-900">
+                    <span className="text-base font-semibold text-slate-900">
                       {portfolioData.location} (Open to Relocation)
                     </span>
                   </div>
@@ -96,10 +96,10 @@ export const Contact = () => {
                 <div className="py-5 border-b border-slate-200 flex gap-4 items-start">
                   <Phone size={16} className="text-blue-600 mt-1 shrink-0" />
                   <div>
-                    <h4 className="font-mono text-[9px] uppercase tracking-widest text-slate-400">
+                    <h4 className="font-mono text-xs uppercase tracking-widest text-slate-500 font-semibold">
                       Direct Voice
                     </h4>
-                    <span className="text-sm font-mono font-semibold text-slate-900">
+                    <span className="text-base font-mono font-semibold text-slate-900">
                       +91 7020803789
                     </span>
                   </div>
@@ -107,7 +107,7 @@ export const Contact = () => {
               </div>
             </div>
 
-            <div className="mt-8 lg:mt-0 p-4 bg-slate-50 border border-slate-200 font-mono text-[10px] text-slate-500 leading-relaxed">
+            <div className="mt-8 lg:mt-0 p-4 bg-slate-50 border border-slate-200 font-mono text-xs text-slate-650 leading-relaxed font-medium">
               // SECURE CONNECTION LINKED.<br />
               // INPUT SUBMISSIONS ARE DELIVERED DIRECTLY TO MAIN ENDPOINTS.
             </div>
@@ -115,15 +115,15 @@ export const Contact = () => {
 
           {/* Right Column: Custom form (Bottom-border inputs only) */}
           <div className="lg:col-span-7">
-            <span className="font-mono text-xs uppercase tracking-widest text-slate-400 block mb-6">
-              Transmission Terminal
-            </span>
+              <span className="font-mono text-sm uppercase tracking-widest text-slate-500 font-semibold block mb-6">
+                Transmission Terminal
+              </span>
 
             <form onSubmit={handleSubmit} className="space-y-8">
 
               {/* Name Input */}
               <div className="flex flex-col gap-1">
-                <label className="font-mono text-[9px] uppercase tracking-widest text-slate-500">
+                <label className="font-mono text-xs uppercase tracking-widest text-slate-500 font-semibold">
                   Sender Name *
                 </label>
                 <input
@@ -131,16 +131,16 @@ export const Contact = () => {
                   placeholder="e.g. Hiring Manager"
                   value={formData.name}
                   onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                  className="w-full bg-transparent border-b border-slate-300 focus:border-blue-600 focus:outline-none py-2 px-0 text-sm text-slate-900 placeholder-slate-400 rounded-none transition-colors"
+                  className="w-full bg-transparent border-b border-slate-300 focus:border-blue-600 focus:outline-none py-2 px-0 text-base text-slate-900 placeholder-slate-400 rounded-none transition-colors"
                 />
                 {errors.name && (
-                  <span className="font-mono text-[9px] text-red-500 mt-1">{errors.name}</span>
+                  <span className="font-mono text-xs text-red-500 mt-1 font-semibold">{errors.name}</span>
                 )}
               </div>
 
               {/* Email Input */}
               <div className="flex flex-col gap-1">
-                <label className="font-mono text-[9px] uppercase tracking-widest text-slate-500">
+                <label className="font-mono text-xs uppercase tracking-widest text-slate-500 font-semibold">
                   SMTP Return Address *
                 </label>
                 <input
@@ -148,16 +148,16 @@ export const Contact = () => {
                   placeholder="name@organization.com"
                   value={formData.email}
                   onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                  className="w-full bg-transparent border-b border-slate-300 focus:border-blue-600 focus:outline-none py-2 px-0 text-sm text-slate-900 placeholder-slate-400 rounded-none transition-colors"
+                  className="w-full bg-transparent border-b border-slate-300 focus:border-blue-600 focus:outline-none py-2 px-0 text-base text-slate-900 placeholder-slate-400 rounded-none transition-colors"
                 />
                 {errors.email && (
-                  <span className="font-mono text-[9px] text-red-500 mt-1">{errors.email}</span>
+                  <span className="font-mono text-xs text-red-500 mt-1 font-semibold">{errors.email}</span>
                 )}
               </div>
 
               {/* Message Input */}
               <div className="flex flex-col gap-1">
-                <label className="font-mono text-[9px] uppercase tracking-widest text-slate-500">
+                <label className="font-mono text-xs uppercase tracking-widest text-slate-500 font-semibold">
                   Payload Message *
                 </label>
                 <textarea
@@ -165,10 +165,10 @@ export const Contact = () => {
                   placeholder="Details regarding roles, architectures, or opportunities..."
                   value={formData.message}
                   onChange={(e) => setFormData({ ...formData, message: e.target.value })}
-                  className="w-full bg-transparent border-b border-slate-300 focus:border-blue-600 focus:outline-none py-2 px-0 text-sm text-slate-900 placeholder-slate-400 rounded-none transition-colors resize-none"
+                  className="w-full bg-transparent border-b border-slate-300 focus:border-blue-600 focus:outline-none py-2 px-0 text-base text-slate-900 placeholder-slate-400 rounded-none transition-colors resize-none"
                 />
                 {errors.message && (
-                  <span className="font-mono text-[9px] text-red-500 mt-1">{errors.message}</span>
+                  <span className="font-mono text-xs text-red-500 mt-1 font-semibold">{errors.message}</span>
                 )}
               </div>
 
@@ -177,7 +177,7 @@ export const Contact = () => {
                 type="submit"
                 variant="primary"
                 disabled={loading}
-                className="w-full bg-slate-900 text-white font-mono text-xs uppercase tracking-wider py-3 rounded-none flex items-center justify-center gap-2 hover:bg-blue-600 transition-colors"
+                className="w-full bg-slate-900 text-white font-mono text-sm uppercase tracking-wider py-3.5 rounded-none flex items-center justify-center gap-2 hover:bg-blue-600 transition-colors"
               >
                 {loading ? (
                   "Sending Payload..."

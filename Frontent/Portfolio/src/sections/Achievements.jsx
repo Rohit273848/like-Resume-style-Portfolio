@@ -35,13 +35,13 @@ export const Achievements = () => {
 
         {/* Section Header */}
         <div className="mb-12">
-          <span className="font-mono text-xs uppercase tracking-widest text-slate-400 block mb-2">
+          <span className="font-mono text-sm uppercase tracking-widest text-slate-500 font-semibold block mb-2">
             06 // Achievements & Profiles
           </span>
           <h2 className="text-3xl font-bold text-slate-900 tracking-tight">
             Competitive Coding & Credentials
           </h2>
-          <p className="text-sm text-slate-500 mt-2">
+          <p className="text-base text-slate-600 mt-2">
             Verified proof of programmatic problem-solving capabilities and industry certifications.
           </p>
         </div>
@@ -56,17 +56,17 @@ export const Achievements = () => {
                 className="p-6 border-r border-b border-slate-200 bg-white hover:bg-slate-50/50 transition-colors duration-200 flex flex-col justify-between min-h-[140px]"
               >
                 <div className="flex justify-between items-start">
-                  <span className="font-mono text-[10px] text-slate-400 uppercase tracking-wider">
+                  <span className="font-mono text-xs text-slate-500 uppercase tracking-wider font-semibold">
                     {stat.platform}
                   </span>
-                  <Icon size={14} className="text-blue-600" />
+                  <Icon size={15} className="text-blue-600" />
                 </div>
 
                 <div className="mt-4">
                   <div className="font-mono text-2xl lg:text-3xl font-bold text-slate-900 leading-none">
                     {stat.value}
                   </div>
-                  <span className="font-sans text-[10px] text-slate-500 block mt-1">
+                  <span className="font-sans text-xs text-slate-600 block mt-1 font-medium">
                     {stat.label}
                   </span>
                 </div>
@@ -75,9 +75,9 @@ export const Achievements = () => {
                   href={stat.url}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center gap-1 font-mono text-[9px] uppercase text-blue-600 hover:text-slate-950 mt-4 self-start tracking-wider"
+                  className="inline-flex items-center gap-1 font-mono text-xs uppercase text-blue-600 hover:text-slate-950 mt-4 self-start tracking-wider font-semibold"
                 >
-                  Verify Profile <ExternalLink size={8} />
+                  Verify Profile <ExternalLink size={10} />
                 </a>
               </div>
             );
@@ -89,8 +89,8 @@ export const Achievements = () => {
 
           {/* Timeline of Achievements */}
           <div>
-            <h3 className="font-mono text-xs font-bold text-slate-800 uppercase tracking-widest mb-6 pb-2 border-b border-slate-200 flex items-center gap-2">
-              <Trophy size={14} className="text-blue-600" />
+            <h3 className="font-mono text-sm font-bold text-slate-800 uppercase tracking-widest mb-6 pb-2 border-b border-slate-200 flex items-center gap-2">
+              <Trophy size={15} className="text-blue-600" />
               Competitive Achievements
             </h3>
 
@@ -105,15 +105,15 @@ export const Achievements = () => {
                   </div>
                   <div className="space-y-1">
                     <div className="flex items-center justify-between gap-4 flex-wrap">
-                      <h4 className="text-sm font-bold text-slate-900 tracking-tight">{item.title}</h4>
-                      <span className="font-mono text-[9px] text-slate-400 bg-slate-100 px-2 py-0.5 rounded">
+                      <h4 className="text-base font-bold text-slate-900 tracking-tight">{item.title}</h4>
+                      <span className="font-mono text-xs text-slate-500 bg-slate-100 px-2 py-0.5 rounded">
                         {item.date}
                       </span>
                     </div>
-                    <span className="font-mono text-[9px] text-blue-600 uppercase tracking-wider block">
+                    <span className="font-mono text-xs text-blue-600 uppercase tracking-wider block font-semibold">
                       Platform: {item.issuer}
                     </span>
-                    <p className="text-slate-600 text-xs leading-relaxed font-light">
+                    <p className="text-slate-700 text-sm leading-relaxed font-normal">
                       {item.description}
                     </p>
                   </div>
@@ -124,8 +124,8 @@ export const Achievements = () => {
 
           {/* Professional Credentials list */}
           <div>
-            <h3 className="font-mono text-xs font-bold text-slate-800 uppercase tracking-widest mb-6 pb-2 border-b border-slate-200 flex items-center gap-2">
-              <Award size={14} className="text-blue-600" />
+            <h3 className="font-mono text-sm font-bold text-slate-800 uppercase tracking-widest mb-6 pb-2 border-b border-slate-200 flex items-center gap-2">
+              <Award size={15} className="text-blue-600" />
               Technical Certifications
             </h3>
 
@@ -140,14 +140,14 @@ export const Achievements = () => {
                   </div>
                   <div className="space-y-1 w-full">
                     <div className="flex items-center justify-between gap-4 flex-wrap">
-                      <h4 className="text-sm font-bold text-slate-900 tracking-tight">{cert.title}</h4>
-                      <span className="font-mono text-[9px] text-slate-400 bg-slate-100 px-2 py-0.5 rounded">
+                      <h4 className="text-base font-bold text-slate-900 tracking-tight">{cert.title}</h4>
+                      <span className="font-mono text-xs text-slate-500 bg-slate-100 px-2.5 py-0.5 rounded">
                         {cert.date}
                       </span>
                     </div>
 
                     <div className="flex items-center justify-between mt-1 flex-wrap gap-2">
-                      <span className="font-mono text-[9px] text-slate-500">
+                      <span className="font-mono text-xs text-slate-650 font-medium">
                         Issuer: {cert.issuer} | ID: {cert.credentialId}
                       </span>
 
@@ -155,9 +155,9 @@ export const Achievements = () => {
                         href={cert.credentialUrl}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="inline-flex items-center gap-1 font-mono text-[9px] uppercase tracking-wider text-blue-600 hover:text-slate-950"
+                        className="inline-flex items-center gap-1 font-mono text-xs uppercase tracking-wider text-blue-600 hover:text-slate-950 font-semibold"
                       >
-                        Verify <ExternalLink size={8} />
+                        Verify <ExternalLink size={10} />
                       </a>
                     </div>
                   </div>

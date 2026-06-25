@@ -25,13 +25,13 @@ export const Education = () => {
 
         {/* Section Header */}
         <div className="mb-12">
-          <span className="font-mono text-xs uppercase tracking-widest text-slate-400 block mb-2">
+          <span className="font-mono text-sm uppercase tracking-widest text-slate-500 font-semibold block mb-2">
             05 // Education & Experience
           </span>
           <h2 className="text-3xl font-bold text-slate-900 tracking-tight">
             Academic & Professional Timelines
           </h2>
-          <p className="text-sm text-slate-500 mt-2">
+          <p className="text-base text-slate-600 mt-2">
             A comprehensive overview of my academic foundation and hands-on systems engineering practice.
           </p>
         </div>
@@ -41,8 +41,8 @@ export const Education = () => {
 
           {/* Column 1: Academic Credentials */}
           <div>
-            <h3 className="font-mono text-xs font-bold text-slate-800 uppercase tracking-widest mb-6 pb-2 border-b border-slate-100 flex items-center gap-2">
-              <GraduationCap size={14} className="text-blue-600" />
+            <h3 className="font-mono text-sm font-bold text-slate-800 uppercase tracking-widest mb-6 pb-2 border-b border-slate-100 flex items-center gap-2">
+              <GraduationCap size={15} className="text-blue-600" />
               Academic Foundation
             </h3>
 
@@ -54,35 +54,35 @@ export const Education = () => {
 
                   <div className="space-y-2">
                     <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-1">
-                      <h4 className="text-sm font-bold text-slate-900 tracking-tight">
+                      <h4 className="text-base font-bold text-slate-900 tracking-tight">
                         {edu.degree}
                       </h4>
-                      <span className="font-mono text-[10px] text-slate-500 bg-slate-100 px-2 py-0.5 rounded self-start sm:self-center">
+                      <span className="font-mono text-xs font-medium text-slate-600 bg-slate-100 px-2.5 py-0.5 rounded self-start sm:self-center">
                         {edu.period}
                       </span>
                     </div>
 
-                    <h5 className="text-xs font-semibold text-blue-600 tracking-wide uppercase">
+                    <h5 className="text-sm font-bold text-blue-600 tracking-wide uppercase">
                       {edu.institution}
                     </h5>
 
-                    <div className="inline-block bg-slate-50 border border-slate-100 text-[10px] font-mono text-slate-700 px-2 py-0.5 mt-1">
+                    <div className="inline-block bg-slate-50 border border-slate-100 text-xs font-mono text-slate-700 px-2 py-0.5 mt-1">
                       {/* Score: {edu.gpa} */}
                     </div>
 
-                    <p className="text-slate-600 text-xs leading-relaxed font-light mt-2">
+                    <p className="text-slate-700 text-sm leading-relaxed font-normal mt-2">
                       {edu.description}
                     </p>
 
                     <div className="pt-2">
-                      <span className="font-mono text-[9px] uppercase tracking-wider text-slate-400 block mb-1">
+                      <span className="font-mono text-xs uppercase tracking-wider text-slate-500 block mb-1">
                         Relevant Coursework:
                       </span>
                       <div className="flex flex-wrap gap-1.5">
                         {edu.courses.map((course, cIdx) => (
                           <span
                             key={cIdx}
-                            className="font-mono text-[9px] text-slate-600 bg-slate-50 border border-slate-200 py-0.5 px-2 rounded"
+                            className="font-mono text-xs text-slate-600 bg-slate-50 border border-slate-200 py-0.5 px-2 rounded font-medium"
                           >
                             {course}
                           </span>
@@ -97,8 +97,8 @@ export const Education = () => {
 
           {/* Column 2: Engineering Experience */}
           <div>
-            <h3 className="font-mono text-xs font-bold text-slate-800 uppercase tracking-widest mb-6 pb-2 border-b border-slate-100 flex items-center gap-2">
-              <Briefcase size={14} className="text-blue-600" />
+            <h3 className="font-mono text-sm font-bold text-slate-800 uppercase tracking-widest mb-6 pb-2 border-b border-slate-100 flex items-center gap-2">
+              <Briefcase size={15} className="text-blue-600" />
               Engineering Practice
             </h3>
 
@@ -110,19 +110,19 @@ export const Education = () => {
 
                   <div className="space-y-2">
                     <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-1">
-                      <h4 className="text-sm font-bold text-slate-900 tracking-tight">
+                      <h4 className="text-base font-bold text-slate-900 tracking-tight">
                         {exp.role}
                       </h4>
-                      <span className="font-mono text-[10px] text-slate-500 bg-slate-100 px-2 py-0.5 rounded self-start sm:self-center">
+                      <span className="font-mono text-xs font-medium text-slate-600 bg-slate-100 px-2.5 py-0.5 rounded self-start sm:self-center">
                         {exp.period}
                       </span>
                     </div>
 
-                    <h5 className="text-xs font-semibold text-slate-600 tracking-wide uppercase">
+                    <h5 className="text-xs font-bold text-slate-600 tracking-wide uppercase">
                       {exp.organization}
                     </h5>
 
-                    <p className="text-slate-600 text-xs leading-relaxed font-light mt-2">
+                    <p className="text-slate-700 text-sm leading-relaxed font-normal mt-2">
                       {exp.description}
                     </p>
                   </div>

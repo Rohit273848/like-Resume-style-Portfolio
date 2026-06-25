@@ -190,7 +190,7 @@ export const Hero = () => {
         {/* Left Side Details (60%) */}
         <div className="lg:col-span-7 flex flex-col justify-center text-left">
           {/* Engineering Badge */}
-          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-blue-100 bg-blue-50/50 text-[10px] uppercase font-mono tracking-widest text-blue-600 font-bold mb-6 w-fit select-none">
+          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-blue-100 bg-blue-50/50 text-xs uppercase font-mono tracking-widest text-blue-600 font-bold mb-6 w-fit select-none">
             <span className="relative flex h-1.5 w-1.5">
               <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-blue-400 opacity-75"></span>
               <span className="relative inline-flex rounded-full h-1.5 w-1.5 bg-blue-500"></span>
@@ -210,8 +210,8 @@ export const Hero = () => {
 
           {/* Short Description */}
           <div className="border-l-2 border-slate-200 pl-6 mb-10 max-w-xl">
-            <p className="text-slate-600 text-sm leading-relaxed font-normal">
-              Computer Engineering student focused on backend architecture, <span className="text-blue-600 font-medium">Machine Learning</span>, APIs, distributed systems, and modern web technologies including <span className="text-blue-600 font-medium">LLM Applications</span>.
+            <p className="text-slate-700 text-base leading-relaxed font-normal">
+              Computer Engineering student focused on backend architecture, <span className="text-blue-600 font-semibold">Machine Learning</span>, APIs, distributed systems, and modern web technologies including <span className="text-blue-600 font-semibold">LLM Applications</span>.
             </p>
           </div>
 
@@ -332,7 +332,7 @@ export const Hero = () => {
                     <div className="w-5 h-5 flex items-center justify-center">
                       {renderTechIcon(node.icon)}
                     </div>
-                    <span className="text-[9px] font-mono font-bold text-slate-600 select-none whitespace-nowrap group-hover:text-blue-600 transition-colors">
+                    <span className="text-xs font-mono font-bold text-slate-600 select-none whitespace-nowrap group-hover:text-blue-600 transition-colors">
                       {node.name}
                     </span>
                   </div>

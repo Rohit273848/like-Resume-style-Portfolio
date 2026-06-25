@@ -8,13 +8,13 @@ export const Skills = () => {
         
         {/* Section Header */}
         <div className="mb-12">
-          <span className="font-mono text-xs uppercase tracking-widest text-slate-400 block mb-2">
+          <span className="font-mono text-sm uppercase tracking-widest text-slate-500 font-semibold block mb-2">
             03 // Skills Matrix
           </span>
           <h2 className="text-3xl font-bold text-slate-900 tracking-tight">
             Technical Competencies
           </h2>
-          <p className="text-sm text-slate-500 mt-2">
+          <p className="text-base text-slate-600 mt-2">
             A precise mapping of my software engineering capabilities and focus areas.
           </p>
         </div>
@@ -29,7 +29,7 @@ export const Skills = () => {
                 className="p-6 border-r border-b border-slate-200 bg-white hover:bg-slate-50/50 transition-colors duration-200"
               >
                 {/* Category Header */}
-                <h3 className="font-mono text-xs font-bold text-slate-800 uppercase tracking-widest mb-4 flex items-center justify-between">
+                <h3 className="font-mono text-sm font-bold text-slate-800 uppercase tracking-widest mb-4 flex items-center justify-between">
                   <span>{indexNumber} // {group.category}</span>
                   <span className="w-1.5 h-1.5 rounded-full bg-blue-600" />
                 </h3>
@@ -39,11 +39,11 @@ export const Skills = () => {
                   {group.items.map((skill, sIdx) => (
                     <div key={sIdx} className="group/item">
                       <div className="flex items-baseline justify-between">
-                        <span className="text-sm font-semibold text-slate-900 font-sans tracking-tight group-hover/item:text-blue-600 transition-colors">
+                        <span className="text-base font-bold text-slate-950 font-sans tracking-tight group-hover/item:text-blue-600 transition-colors">
                           {skill.name}
                         </span>
                       </div>
-                      <p className="font-mono text-[10px] text-slate-500 mt-0.5 tracking-wide leading-tight">
+                      <p className="font-mono text-xs text-slate-600 mt-1 tracking-wide leading-relaxed">
                         {skill.detail}
                       </p>
                     </div>

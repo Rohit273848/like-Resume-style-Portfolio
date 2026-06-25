@@ -41,7 +41,7 @@ export const Sidebar = ({ activeSection, setActiveSection, menuOpen, setMenuOpen
     <>
       {/* Mobile Sticky Header Bar */}
       <div className="fixed top-0 left-0 right-0 h-16 bg-white/90 backdrop-blur-md border-b border-slate-200 z-50 flex items-center justify-between px-6 lg:hidden">
-        <span className="font-mono text-xs font-bold uppercase tracking-widest text-slate-900">
+        <span className="font-mono text-sm font-bold uppercase tracking-widest text-slate-900">
           rohit.dev
         </span>
         <button
@@ -63,7 +63,7 @@ export const Sidebar = ({ activeSection, setActiveSection, menuOpen, setMenuOpen
           {/* Header Brand for large screens */}
           <div className="hidden lg:flex items-center gap-2 px-8 mb-2">
             <Terminal size={16} className="text-blue-600" />
-            <span className="font-mono text-xs font-extrabold uppercase tracking-widest text-slate-900">
+            <span className="font-mono text-sm font-extrabold uppercase tracking-widest text-slate-900">
               rohitmahajan.dev
             </span>
           </div>
@@ -87,7 +87,7 @@ export const Sidebar = ({ activeSection, setActiveSection, menuOpen, setMenuOpen
             <h1 className="font-sans font-bold text-slate-900 text-lg tracking-tight mt-1">
               {portfolioData.name}
             </h1>
-            <span className="font-mono text-[10px] text-slate-500 uppercase tracking-wider mt-0.5">
+            <span className="font-mono text-xs text-slate-650 uppercase tracking-wider font-semibold mt-0.5">
               Backend & AI Engineer
             </span>
 
@@ -97,7 +97,7 @@ export const Sidebar = ({ activeSection, setActiveSection, menuOpen, setMenuOpen
                 <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-blue-400 opacity-75"></span>
                 <span className="relative inline-flex rounded-full h-2 w-2 bg-blue-600"></span>
               </span>
-              <span className="text-[10px] text-blue-700 font-semibold tracking-wider uppercase">
+              <span className="text-xs text-blue-700 font-bold tracking-wider uppercase">
                 Open to Internship
               </span>
             </div>
@@ -112,13 +112,13 @@ export const Sidebar = ({ activeSection, setActiveSection, menuOpen, setMenuOpen
                 <button
                   key={item.id}
                   onClick={() => handleNavClick(item.id)}
-                  className={`group flex items-center justify-between w-full px-8 py-3 text-xs font-mono tracking-wider uppercase transition-all duration-200 border-r-2 ${isActive
+                  className={`group flex items-center justify-between w-full px-8 py-3 text-sm font-mono tracking-wider uppercase transition-all duration-200 border-r-2 ${isActive
                     ? "bg-slate-50 text-blue-600 border-blue-600 font-bold"
                     : "text-slate-500 hover:text-slate-900 hover:bg-slate-50/50 border-transparent"
                     }`}
                 >
                   <div className="flex items-center gap-3">
-                    <Icon size={14} className={isActive ? "text-blue-600" : "text-slate-400 group-hover:text-slate-600"} />
+                    <Icon size={15} className={isActive ? "text-blue-600" : "text-slate-400 group-hover:text-slate-600"} />
                     <span>{item.label}</span>
                   </div>
                 </button>
@@ -134,9 +134,9 @@ export const Sidebar = ({ activeSection, setActiveSection, menuOpen, setMenuOpen
             href={portfolioData.resumeUrl}
             target="_blank"
             rel="noopener noreferrer"
-            className="group flex items-center justify-center gap-2 bg-slate-900 hover:bg-blue-600 text-white font-mono text-xs uppercase tracking-wider py-2.5 px-4 transition-all duration-300"
+            className="group flex items-center justify-center gap-2 bg-slate-900 hover:bg-blue-600 text-white font-mono text-sm uppercase tracking-wider py-2.5 px-4 transition-all duration-300"
           >
-            <ExternalLink size={14} className="group-hover:translate-x-0.5 transition-transform" />
+            <ExternalLink size={15} className="group-hover:translate-x-0.5 transition-transform" />
             View CV
           </a>
 
@@ -149,7 +149,7 @@ export const Sidebar = ({ activeSection, setActiveSection, menuOpen, setMenuOpen
               className="p-1.5 border border-slate-200 text-slate-400 hover:text-blue-600 hover:border-blue-600 transition-all rounded-md"
               aria-label="GitHub Profile"
             >
-              <Github size={15} />
+              <Github size={16} />
             </a>
             <a
               href={portfolioData.linkedin}
@@ -158,18 +158,18 @@ export const Sidebar = ({ activeSection, setActiveSection, menuOpen, setMenuOpen
               className="p-1.5 border border-slate-200 text-slate-400 hover:text-blue-600 hover:border-blue-600 transition-all rounded-md"
               aria-label="LinkedIn Profile"
             >
-              <Linkedin size={15} />
+              <Linkedin size={16} />
             </a>
             <a
               href={`mailto:${portfolioData.email}`}
               className="p-1.5 border border-slate-200 text-slate-400 hover:text-blue-600 hover:border-blue-600 transition-all rounded-md"
               aria-label="Send Email"
             >
-              <Mail size={15} />
+              <Mail size={16} />
             </a>
           </div>
 
-          <p className="font-mono text-[9px] text-slate-400 text-center uppercase tracking-widest mt-1">
+          <p className="font-mono text-xs text-slate-450 text-center uppercase tracking-widest mt-1">
             &copy; {new Date().getFullYear()} ROHIT.MAHAJAN
           </p>
         </div>

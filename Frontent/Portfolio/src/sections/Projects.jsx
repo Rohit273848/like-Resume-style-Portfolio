@@ -9,13 +9,13 @@ export const Projects = () => {
         
         {/* Section Header */}
         <div className="mb-16">
-          <span className="font-mono text-xs uppercase tracking-widest text-slate-400 block mb-2">
+          <span className="font-mono text-sm uppercase tracking-widest text-slate-500 font-semibold block mb-2">
             04 // Case Studies
           </span>
           <h2 className="text-3xl font-bold text-slate-900 tracking-tight">
             Featured Projects & Products
           </h2>
-          <p className="text-sm text-slate-500 mt-2">
+          <p className="text-base text-slate-600 mt-2">
             Case studies detailing system problems, approaches, architectures, and performance outcomes.
           </p>
         </div>
@@ -37,7 +37,7 @@ export const Projects = () => {
                 {/* Project Header Bar */}
                 <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 mb-6">
                   <div>
-                    <span className="font-mono text-[10px] text-blue-600 uppercase tracking-widest font-semibold block mb-1">
+                    <span className="font-mono text-xs text-blue-600 uppercase tracking-widest font-bold block mb-1">
                       System Case Study #{indexStr}
                     </span>
                     <h3 className="text-2xl font-bold text-slate-900 tracking-tight">
@@ -51,17 +51,17 @@ export const Projects = () => {
                       href={project.githubUrl}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="inline-flex items-center gap-1.5 font-mono text-[10px] uppercase tracking-wider text-slate-500 hover:text-blue-600 border border-slate-200 hover:border-blue-600 bg-white py-1.5 px-3 rounded-md transition-all"
+                      className="inline-flex items-center gap-1.5 font-mono text-xs uppercase tracking-wider text-slate-600 hover:text-blue-600 border border-slate-200 hover:border-blue-600 bg-white py-1.5 px-3 rounded-md transition-all font-medium"
                     >
-                      <Github size={12} /> Source
+                      <Github size={13} /> Source
                     </a>
                     <a
                       href={project.liveUrl}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="inline-flex items-center gap-1.5 font-mono text-[10px] uppercase tracking-wider text-slate-500 hover:text-blue-600 border border-slate-200 hover:border-blue-600 bg-white py-1.5 px-3 rounded-md transition-all"
+                      className="inline-flex items-center gap-1.5 font-mono text-xs uppercase tracking-wider text-slate-600 hover:text-blue-600 border border-slate-200 hover:border-blue-600 bg-white py-1.5 px-3 rounded-md transition-all font-medium"
                     >
-                      <ExternalLink size={12} /> Live Demo
+                      <ExternalLink size={13} /> Live Demo
                     </a>
                   </div>
                 </div>
@@ -71,16 +71,16 @@ export const Projects = () => {
                   <div className="mb-6 bg-slate-900 border border-slate-800 p-4 rounded-md relative overflow-hidden group">
                     <div className="flex items-center justify-between border-b border-slate-800 pb-2 mb-3">
                       <div className="flex items-center gap-2">
-                        <Terminal size={12} className="text-blue-400" />
-                        <span className="font-mono text-[9px] uppercase tracking-widest text-slate-400">
+                        <Terminal size={13} className="text-blue-400" />
+                        <span className="font-mono text-xs uppercase tracking-widest text-slate-400">
                           Dataflow & Topology Schematic
                         </span>
                       </div>
-                      <span className="font-mono text-[8px] text-slate-500">
+                      <span className="font-mono text-[10px] text-slate-500">
                         STATUS: COMPILED // STABLE
                       </span>
                     </div>
-                    <div className="font-mono text-[11px] text-emerald-400 overflow-x-auto whitespace-nowrap py-1 scrollbar-thin">
+                    <div className="font-mono text-xs text-emerald-400 overflow-x-auto whitespace-nowrap py-1 scrollbar-thin">
                       {project.architecture}
                     </div>
                   </div>
@@ -92,19 +92,19 @@ export const Projects = () => {
                   {/* Problem & Approach */}
                   <div className="space-y-4">
                     <div className="border-l border-red-200 pl-4">
-                      <span className="font-mono text-[9px] uppercase tracking-widest text-red-500 font-bold block mb-1">
+                      <span className="font-mono text-xs uppercase tracking-widest text-red-500 font-bold block mb-1.5">
                         [01] The Bottleneck
                       </span>
-                      <p className="text-slate-600 text-xs leading-relaxed font-light">
+                      <p className="text-slate-700 text-sm leading-relaxed font-normal">
                         {project.problem}
                       </p>
                     </div>
 
                     <div className="border-l border-blue-200 pl-4">
-                      <span className="font-mono text-[9px] uppercase tracking-widest text-blue-500 font-bold block mb-1">
+                      <span className="font-mono text-xs uppercase tracking-widest text-blue-500 font-bold block mb-1.5">
                         [02] System Design Approach
                       </span>
-                      <p className="text-slate-600 text-xs leading-relaxed font-light">
+                      <p className="text-slate-700 text-sm leading-relaxed font-normal">
                         {project.solution}
                       </p>
                     </div>
@@ -112,13 +112,13 @@ export const Projects = () => {
 
                   {/* Key Features & Outcomes */}
                   <div className="border-l border-emerald-200 pl-4">
-                    <span className="font-mono text-[9px] uppercase tracking-widest text-emerald-600 font-bold block mb-2">
+                    <span className="font-mono text-xs uppercase tracking-widest text-emerald-600 font-bold block mb-2.5">
                       [03] Key Implementation Features
                     </span>
                     <ul className="space-y-2">
                       {project.keyFeatures.map((feat, fIdx) => (
-                        <li key={fIdx} className="flex gap-2 text-slate-600 text-xs leading-relaxed font-light">
-                          <CheckCircle2 size={13} className="text-emerald-500 shrink-0 mt-0.5" />
+                        <li key={fIdx} className="flex gap-2 text-slate-700 text-sm leading-relaxed font-normal">
+                          <CheckCircle2 size={14} className="text-emerald-500 shrink-0 mt-0.5" />
                           <span>{feat}</span>
                         </li>
                       ))}
@@ -129,13 +129,13 @@ export const Projects = () => {
 
                 {/* Technologies List */}
                 <div className="flex flex-wrap items-center gap-1.5 border-t border-slate-200/60 pt-4">
-                  <span className="font-mono text-[9px] uppercase tracking-widest text-slate-400 mr-2">
+                  <span className="font-mono text-xs uppercase tracking-widest text-slate-500 font-medium mr-2">
                     Tech Stack:
                   </span>
                   {project.technologies.map((tech, tIdx) => (
                     <span 
                       key={tIdx}
-                      className="font-mono text-[9px] uppercase tracking-wider text-slate-600 bg-white border border-slate-200 py-0.5 px-2 rounded"
+                      className="font-mono text-[10px] uppercase tracking-wider text-slate-600 bg-white border border-slate-200 py-0.5 px-2 rounded font-semibold"
                     >
                       {tech}
                     </span>
