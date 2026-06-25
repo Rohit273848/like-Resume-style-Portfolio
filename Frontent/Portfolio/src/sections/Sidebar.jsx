@@ -17,7 +17,7 @@ import {
 import { portfolioData } from "../data/portfolioData";
 import rohitAvatar from "../assets/images/profile.jpeg";
 
-export const Sidebar = ({ activeSection, setActiveSection, menuOpen, setMenuOpen }) => {
+export const Sidebar = ({ activeSection, setActiveSection, sidebarOpen, setSidebarOpen }) => {
   const navItems = [
     { id: "hero", label: "01 // Home", icon: Home },
     { id: "about", label: "02 // About Me", icon: User },
@@ -29,7 +29,9 @@ export const Sidebar = ({ activeSection, setActiveSection, menuOpen, setMenuOpen
   ];
 
   const handleNavClick = (id) => {
-    setMenuOpen(false);
+    if (window.innerWidth < 1024) {
+      setSidebarOpen(false);
+    }
     setActiveSection(id);
     const element = document.getElementById(id);
     if (element) {
@@ -39,24 +41,33 @@ export const Sidebar = ({ activeSection, setActiveSection, menuOpen, setMenuOpen
 
   return (
     <>
+      {/* Mobile Backdrop Overlay */}
+      {sidebarOpen && (
+        <div
+          className="fixed inset-0 bg-slate-900/40 backdrop-blur-sm z-30 lg:hidden transition-opacity duration-300"
+          onClick={() => setSidebarOpen(false)}
+        />
+      )}
+
       {/* Mobile Sticky Header Bar */}
       <div className="fixed top-0 left-0 right-0 h-16 bg-white/90 backdrop-blur-md border-b border-slate-200 z-50 flex items-center justify-between px-6 lg:hidden">
         <span className="font-mono text-sm font-bold uppercase tracking-widest text-slate-900">
           rohit.dev
         </span>
         <button
-          onClick={() => setMenuOpen(!menuOpen)}
-          className="p-2 border border-slate-200 text-slate-800 rounded-lg hover:bg-slate-50 transition-colors"
+          onClick={() => setSidebarOpen(!sidebarOpen)}
+          className="p-2 border border-slate-200 text-slate-800 rounded-lg hover:bg-slate-50 transition-colors cursor-pointer"
           aria-label="Toggle navigation menu"
         >
-          {menuOpen ? <X size={18} /> : <Menu size={18} />}
+          {sidebarOpen ? <X size={18} /> : <Menu size={18} />}
         </button>
       </div>
 
       {/* Sidebar Panel Container */}
       <aside
-        className={`fixed top-0 left-0 h-full w-80 bg-white border-r border-slate-200 z-40 flex flex-col justify-between pt-24 pb-8 transition-transform duration-300 lg:translate-x-0 lg:pt-10 ${menuOpen ? "translate-x-0" : "-translate-x-full"
-          }`}
+        className={`fixed top-0 left-0 h-full w-80 bg-white border-r border-slate-200 z-40 flex flex-col justify-between pt-24 pb-8 transition-transform duration-300 lg:pt-10 ${
+          sidebarOpen ? "translate-x-0" : "-translate-x-full"
+        }`}
       >
         {/* Top Branding & Avatar Info */}
         <div className="flex flex-col gap-6">

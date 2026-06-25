@@ -13,7 +13,12 @@ import { ScrollToTop } from "./components/ScrollToTop";
 
 function App() {
   const [activeSection, setActiveSection] = useState("hero");
-  const [menuOpen, setMenuOpen] = useState(false);
+  const [sidebarOpen, setSidebarOpen] = useState(() => {
+    if (typeof window !== "undefined") {
+      return window.innerWidth >= 1024;
+    }
+    return false;
+  });
 
   useEffect(() => {
     const sections = [
@@ -62,15 +67,17 @@ function App() {
       <Sidebar
         activeSection={activeSection}
         setActiveSection={setActiveSection}
-        menuOpen={menuOpen}
-        setMenuOpen={setMenuOpen}
+        sidebarOpen={sidebarOpen}
+        setSidebarOpen={setSidebarOpen}
       />
 
       {/* Main Content viewport scroll area */}
-      <main className="flex-1 lg:pl-80 min-w-0 flex flex-col min-h-screen pt-16 lg:pt-0">
+      <main className={`flex-1 min-w-0 flex flex-col min-h-screen pt-16 lg:pt-0 transition-all duration-300 ease-in-out ${
+        sidebarOpen ? "lg:pl-80" : "lg:pl-0"
+      }`}>
 
         {/* Top Header metadata bar */}
-        <Header />
+        <Header sidebarOpen={sidebarOpen} setSidebarOpen={setSidebarOpen} />
 
         {/* Dynamic Editorial Sections */}
         <Hero activeSection={activeSection} />
