@@ -36,7 +36,7 @@ export const Contact = () => {
   };
 
   return (
-    <section id="contact" className="w-full bg-white relative py-20 px-8 lg:px-20 border-b border-slate-200">
+    <section id="contact" className="w-full bg-transparent relative py-20 px-8 lg:px-20 border-b border-slate-200">
       <div className="max-w-5xl mx-auto">
 
         {/* Section Header */}

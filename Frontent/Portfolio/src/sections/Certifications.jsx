@@ -7,7 +7,7 @@ import { Award, ExternalLink, Calendar } from "lucide-react";
 
 export const Certifications = () => {
   return (
-    <section id="certifications" className="py-16 px-6 lg:px-12 bg-slate-50 border-t border-slate-200">
+    <section id="certifications" className="py-16 px-6 lg:px-12 bg-transparent border-t border-slate-200">
       <div className="max-w-5xl mx-auto">
         <SectionHeading title="Certifications" subtitle="Professional Ranks" />
 

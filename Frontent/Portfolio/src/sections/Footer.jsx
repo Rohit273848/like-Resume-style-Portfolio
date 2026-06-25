@@ -3,7 +3,7 @@ import { portfolioData } from "../data/portfolioData";
 
 export const Footer = () => {
   return (
-    <footer className="py-8 px-6 bg-slate-50 border-t border-slate-200 text-center text-xs text-slate-500">
+    <footer className="py-8 px-6 bg-transparent border-t border-slate-200 text-center text-xs text-slate-500">
       <div className="flex flex-col sm:flex-row items-center justify-between gap-4 max-w-5xl mx-auto">
         <p>&copy; {new Date().getFullYear()} {portfolioData.name}. All rights reserved.</p>
         <p className="flex gap-4">

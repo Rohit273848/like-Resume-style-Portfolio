@@ -42,7 +42,7 @@ export const GitHubStats = () => {
   ];
 
   return (
-    <section id="github-stats" className="py-16 px-6 lg:px-12 bg-slate-50 border-t border-slate-200">
+    <section id="github-stats" className="py-16 px-6 lg:px-12 bg-transparent border-t border-slate-200">
       <div className="max-w-5xl mx-auto">
         <SectionHeading title="Coding Profiles & Ranks" subtitle="Problem Solving Metrics" />
 

@@ -100,4 +100,24 @@ body {
   animation: network-pulse 4s ease-in-out infinite;
 }
 
+/* Custom background patterns for premium editorial aesthetic */
+.bg-dot-pattern {
+  background-size: 32px 32px;
+  background-image: radial-gradient(circle, rgba(148, 163, 184, 0.14) 1.2px, transparent 1.2px);
+}
+
+@keyframes slow-pan {
+  0% {
+    background-position: 0% 0%;
+  }
+  100% {
+    background-position: 0% 100%;
+  }
+}
+
+.animate-slow-pan {
+  animation: slow-pan 120s linear infinite;
+}
+
+
 

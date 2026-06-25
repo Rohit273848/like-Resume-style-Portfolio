@@ -88,10 +88,7 @@ export const Skills = () => {
   };
 
   return (
-    <section id="skills" className="w-full bg-white relative py-24 px-8 lg:px-20 border-b border-slate-200 overflow-hidden">
-      {/* Editorial aesthetic guide lines */}
-      <div className="absolute top-0 bottom-0 left-12 lg:left-24 w-[1px] bg-slate-100/60 pointer-events-none" />
-      <div className="absolute top-0 bottom-0 right-12 lg:right-24 w-[1px] bg-slate-100/60 pointer-events-none" />
+    <section id="skills" className="w-full bg-transparent relative py-24 px-8 lg:px-20 border-b border-slate-200 overflow-hidden">
 
       <motion.div
         variants={containerVariants}

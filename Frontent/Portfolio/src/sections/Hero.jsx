@@ -39,7 +39,7 @@ export const Hero = ({ activeSection }) => {
   return (
     <section
       id="hero"
-      className="w-full bg-[#f8fafc] relative py-20 lg:py-28 px-6 lg:px-16 overflow-hidden flex flex-col justify-center items-center min-h-screen z-20"
+      className="w-full bg-transparent relative py-20 lg:py-28 px-6 lg:px-16 overflow-hidden flex flex-col justify-center items-center min-h-screen z-20"
     >
       {/* Background & Grain */}
       <div className="absolute inset-0 pointer-events-none z-0 select-none">
@@ -83,7 +83,7 @@ export const Hero = ({ activeSection }) => {
         animate="visible"
         className="relative z-10 max-w-5xl w-full mx-auto flex flex-col items-center justify-center text-center"
       >
-        {/* 1. Small Decorative Accent */}
+        {/* 1. Small Decorative Accent
         <motion.div variants={itemVariants} className="mb-6 flex items-center justify-center">
           <motion.div
             animate={{ y: [0, -4, 0] }}
@@ -92,7 +92,7 @@ export const Hero = ({ activeSection }) => {
           >
             <div className="w-1.5 h-1.5 rounded-full bg-blue-600 animate-pulse" />
           </motion.div>
-        </motion.div>
+        </motion.div> */}
 
         {/* 2. My Name */}
         <motion.h1
@@ -176,15 +176,22 @@ export const Hero = ({ activeSection }) => {
         {/* 8. Scroll Indicator */}
         <motion.div
           variants={itemVariants}
-          className="mt-12 lg:mt-16 flex flex-col items-center gap-2 pointer-events-none select-none z-10"
+          whileHover={{ y: 4 }}
+          onClick={() => {
+            const element = document.getElementById("about");
+            if (element) {
+              element.scrollIntoView({ behavior: "smooth" });
+            }
+          }}
+          className="mt-12 lg:mt-16 flex flex-col items-center gap-2 cursor-pointer select-none z-10 group pointer-events-auto"
         >
-          <span className="text-[9px] sm:text-[10px] font-mono uppercase tracking-[0.25em] text-slate-400">
+          <span className="text-[9px] sm:text-[10px] font-mono uppercase tracking-[0.25em] text-slate-400 group-hover:text-blue-600 transition-colors duration-300">
             Scroll to Explore
           </span>
           <motion.div
             animate={{ y: [0, 6, 0] }}
             transition={{ repeat: Infinity, duration: 2, ease: "easeInOut" }}
-            className="w-1.5 h-1.5 rounded-full bg-blue-600"
+            className="w-1.5 h-1.5 rounded-full bg-blue-600 group-hover:bg-blue-700 transition-colors duration-300"
           />
         </motion.div>
       </motion.div>
