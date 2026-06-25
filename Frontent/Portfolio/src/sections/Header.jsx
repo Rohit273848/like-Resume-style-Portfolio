@@ -3,7 +3,7 @@ import { Terminal, Globe } from "lucide-react";
 
 export const Header = () => {
   return (
-    <header className="hidden lg:flex h-14 bg-white border-b border-slate-200 items-center justify-between px-12 relative z-30">
+    <header className="hidden lg:flex h-14 bg-transparent items-center justify-between px-12 relative z-30">
       {/* Grid line indicator */}
       <div className="flex items-center gap-2">
         <Globe size={14} className="text-slate-400 animate-spin-slow" />

@@ -73,7 +73,7 @@ function App() {
         <Header />
 
         {/* Dynamic Editorial Sections */}
-        <Hero />
+        <Hero activeSection={activeSection} />
         <About />
         <Skills />
         <Projects />
