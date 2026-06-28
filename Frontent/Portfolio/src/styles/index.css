@@ -5,11 +5,16 @@
   --font-sans: "Inter", system-ui, -apple-system, sans-serif;
   --font-serif: "Instrument Serif", Georgia, serif;
   --font-mono: "JetBrains Mono", monospace;
-  
+
   --color-brand-blue: #2563eb;
-  --color-canvas-white: #ffffff;
-  --color-canvas-slate: #f8fafc;
-  --color-border-guide: #e2e8f0;
+  --color-canvas-white: #FEFBF0;
+  --color-canvas-slate: #F5F2E5;
+  --color-border-guide: #E0DCBA;
+
+  --color-white: #FEFBF0;
+  --color-slate-50: #F5F2E5;
+  --color-slate-100: #EAE6D5;
+  --color-slate-200: #DDD9C5;
 }
 
 :root {
@@ -30,49 +35,64 @@ body {
   width: 6px;
   height: 6px;
 }
+
 ::-webkit-scrollbar-track {
   background: var(--color-canvas-slate);
 }
+
 ::-webkit-scrollbar-thumb {
   background: #cbd5e1;
   border-radius: 3px;
 }
+
 ::-webkit-scrollbar-thumb:hover {
   background: #94a3b8;
 }
 
 /* Custom keyframes for hero redesign */
 @keyframes float-1 {
-  0%, 100% {
+
+  0%,
+  100% {
     transform: translate(-50%, -50%) translateY(0px) rotate(0deg);
   }
+
   50% {
     transform: translate(-50%, -50%) translateY(-10px) rotate(1deg);
   }
 }
 
 @keyframes float-2 {
-  0%, 100% {
+
+  0%,
+  100% {
     transform: translate(-50%, -50%) translateY(0px) rotate(0deg);
   }
+
   50% {
     transform: translate(-50%, -50%) translateY(-6px) translateX(4px) rotate(-1deg);
   }
 }
 
 @keyframes float-3 {
-  0%, 100% {
+
+  0%,
+  100% {
     transform: translate(-50%, -50%) translateY(0px) rotate(0deg);
   }
+
   50% {
     transform: translate(-50%, -50%) translateY(-8px) translateX(-4px) rotate(0.5deg);
   }
 }
 
 @keyframes network-pulse {
-  0%, 100% {
+
+  0%,
+  100% {
     opacity: 0.15;
   }
+
   50% {
     opacity: 0.35;
   }
@@ -87,15 +107,19 @@ body {
 .animate-float-1 {
   animation: float-1 6s ease-in-out infinite;
 }
+
 .animate-float-2 {
   animation: float-2 7s ease-in-out infinite;
 }
+
 .animate-float-3 {
   animation: float-3 8s ease-in-out infinite;
 }
+
 .animate-dash {
   animation: dash 20s linear infinite;
 }
+
 .animate-pulse-slow {
   animation: network-pulse 4s ease-in-out infinite;
 }
@@ -110,6 +134,7 @@ body {
   0% {
     background-position: 0% 0%;
   }
+
   100% {
     background-position: 0% 100%;
   }
@@ -118,6 +143,3 @@ body {
 .animate-slow-pan {
   animation: slow-pan 120s linear infinite;
 }
-
-
-

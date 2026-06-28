@@ -14,7 +14,7 @@ export const projects = [
     technologies: ["Node.js", "Express.js", "Python", "Gemini API", "MongoDB", "REST APIs"],
     githubUrl: "https://github.com",
     liveUrl: "https://example.com",
-    image: "project-ai-resume.webp"
+    image: "project-ai-resume.png"
   },
   {
     id: 2,
@@ -44,7 +44,7 @@ export const projects = [
     ],
     githubUrl: "YOUR_GITHUB_LINK",
     liveUrl: "YOUR_LIVE_LINK",
-    image: "support-desk.webp"
+    image: "support-desk.png"
   },
   {
     id: 3,
@@ -77,6 +77,6 @@ export const projects = [
     ],
     githubUrl: "YOUR_GITHUB_LINK",
     liveUrl: "YOUR_LIVE_LINK",
-    image: "quickmind-ai.webp"
+    image: "quickmind-ai.png"
   }
 ];

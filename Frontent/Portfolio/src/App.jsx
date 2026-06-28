@@ -72,9 +72,8 @@ function App() {
       />
 
       {/* Main Content viewport scroll area */}
-      <main className={`relative flex-1 min-w-0 flex flex-col min-h-screen pt-16 lg:pt-0 transition-all duration-300 ease-in-out ${
-        sidebarOpen ? "lg:pl-80" : "lg:pl-0"
-      }`}>
+      <main className={`relative flex-1 min-w-0 flex flex-col min-h-screen pt-16 lg:pt-0 transition-all duration-300 ease-in-out ${sidebarOpen ? "lg:pl-80" : "lg:pl-0"
+        }`}>
 
         {/* Global Editorial Background Layer */}
         <div className="absolute inset-0 pointer-events-none z-0 select-none overflow-hidden">
@@ -89,16 +88,16 @@ function App() {
           {/* Floating glowing color auroras / blur circles */}
           {/* Aurora 1 (Hero/About top region) */}
           <div className="absolute top-[3%] right-[10%] w-[500px] h-[500px] rounded-full bg-blue-500/[0.04] blur-[120px] animate-pulse-slow" />
-          
+
           {/* Aurora 2 (Skills middle-top region) */}
           <div className="absolute top-[22%] left-[8%] w-[600px] h-[600px] rounded-full bg-indigo-500/[0.05] blur-[130px]" />
-          
+
           {/* Aurora 3 (Projects middle region) */}
           <div className="absolute top-[45%] right-[5%] w-[550px] h-[550px] rounded-full bg-blue-500/[0.035] blur-[110px]" />
-          
+
           {/* Aurora 4 (Education/Achievements middle-bottom region) */}
           <div className="absolute top-[68%] left-[5%] w-[600px] h-[600px] rounded-full bg-indigo-500/[0.04] blur-[125px]" />
-          
+
           {/* Aurora 5 (Contact/Footer bottom region) */}
           <div className="absolute top-[88%] right-[8%] w-[500px] h-[500px] rounded-full bg-blue-500/[0.04] blur-[110px] animate-pulse-slow" />
         </div>
@@ -108,9 +107,10 @@ function App() {
 
         {/* Dynamic Editorial Sections */}
         <Hero activeSection={activeSection} />
+        <Projects />
         <About />
         <Skills />
-        <Projects />
+
         <Education />
         <Achievements />
         <Contact />
